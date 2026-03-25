@@ -50,7 +50,7 @@ const doctors: Doctor[] = [
     rating: 4.9,
     bio: "Expert in advanced heart failure and non-invasive cardiac imaging.",
     fullBio: "Dr. Sarah Jenkins is a world-renowned cardiologist with over 15 years of experience in treating complex heart conditions. She has pioneered several non-invasive imaging techniques and is a frequent speaker at international medical conferences.",
-    image: "https://images.unsplash.com/photo-1559839734-2b71f1536780?auto=format&fit=crop&q=80&w=800",
+    image: "https://png.pngtree.com/png-clipart/20231002/original/pngtree-young-afro-professional-doctor-png-image_13227671.png",
     qualifications: "MD, FACC, Harvard Medical School",
     certifications: ["Board Certified in Cardiovascular Disease", "Advanced Cardiac Life Support"],
     expertise: ["Heart Failure Management", "Echocardiography", "Preventive Cardiology"],

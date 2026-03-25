@@ -29,7 +29,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
   ];
 
   const timeline = [
-    { year: "2004", title: "Hospital Founded", desc: "Medify was established with a vision to provide accessible healthcare." },
+    { year: "2004", title: "Hospital Founded", desc: "Abba Sena Hospitalwas established with a vision to provide accessible healthcare." },
     { year: "2010", title: "Expansion Phase I", desc: "Added 50 new beds and a dedicated cardiology wing." },
     { year: "2015", title: "Advanced Diagnostics", desc: "Introduced state-of-the-art MRI and CT scanning facilities." },
     { year: "2020", title: "Digital Transformation", desc: "Launched virtual consultation and digital health records." },
@@ -59,7 +59,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
   ];
 
   const testimonials = [
-    { name: "John Smith", quote: "The care I received at Medify was exceptional. The staff was professional and truly cared about my recovery.", rating: 5 },
+    { name: "John Smith", quote: "The care I received at Abba Sena Hospitalwas exceptional. The staff was professional and truly cared about my recovery.", rating: 5 },
     { name: "Emily Davis", quote: "State-of-the-art facilities and very knowledgeable doctors. Highly recommend for any specialized care.", rating: 5 },
   ];
 
@@ -69,9 +69,9 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
       <section className="relative h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://picsum.photos/seed/about-hero/1920/1080" 
+            src="https://thumbs.dreamstime.com/b/inside-modern-smart-hospital-cutting-edge-technologies-seamlessly-integrate-compassionate-care-creating-environment-305907805.jpg" 
             alt="About Our Hospital" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover blur-sm"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -109,7 +109,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
               <span className="pill-tag text-medical-blue border-medical-blue/20">Who We Are</span>
               <h2 className="text-4xl md:text-5xl font-bold text-medical-dark">Dedicated to Your Well-being</h2>
               <p className="text-lg text-medical-gray leading-relaxed">
-                Medify is more than just a hospital; we are a community dedicated to healing and innovation. Our patient-centered approach ensures that every individual receives personalized care tailored to their unique needs. We combine cutting-edge technology with compassionate service to make a lasting impact on the lives of our patients.
+                Abba Sena Hospitalis more than just a hospital; we are a community dedicated to healing and innovation. Our patient-centered approach ensures that every individual receives personalized care tailored to their unique needs. We combine cutting-edge technology with compassionate service to make a lasting impact on the lives of our patients.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
                 {stats.map((stat, idx) => (
@@ -224,7 +224,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
           </div>
 
           <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold text-medical-dark">Our Core Values</h3>
+            <h3 className="text-3xl font-bold text-medical-dark border-b-2 border-medical-blue pb-4">Our Core Values</h3>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {coreValues.map((value, idx) => (
@@ -234,9 +234,9 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="text-center space-y-4"
+                className="text-center space-y-4 text-2xl font-bold text-medical-dark"
               >
-                <div className="w-20 h-20 rounded-3xl bg-medical-soft flex items-center justify-center text-medical-blue mx-auto mb-4">
+                <div className="w-20 h-20 rounded-3xl bg-medical-soft flex items-center justify-center text-medical-blue mx-auto mb-4 ">
                   {value.icon}
                 </div>
                 <h4 className="font-bold text-medical-dark">{value.title}</h4>
@@ -248,7 +248,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
       </section>
 
       {/* 5. WHY CHOOSE US */}
-      <section className="section-padding bg-medical-dark text-white">
+      <section className="section-padding bg-medical-dark text-white ">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -262,7 +262,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
                   <div key={idx} className="flex gap-4 p-6 bg-white/5 rounded-3xl border border-white/10">
                     <div className="text-medical-blue shrink-0">{item.icon}</div>
                     <div>
-                      <h4 className="font-bold mb-1">{item.title}</h4>
+                      <h4 className="text-[24px] mb-1">{item.title}</h4>
                       <p className="text-xs text-white/60">{item.desc}</p>
                     </div>
                   </div>
@@ -288,7 +288,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <span className="pill-tag text-medical-blue border-medical-blue/20">Our Leadership</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-medical-dark mt-4">The Minds Behind Medify</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-medical-dark mt-4">The Minds Behind Abba Sena Hospital</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {leadership.map((leader, idx) => (
@@ -331,7 +331,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
                 <span className="pill-tag text-medical-lovely border-medical-lovely/20">Our Culture</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-medical-dark">A Philosophy of Empathy</h2>
                 <p className="text-lg text-medical-gray leading-relaxed">
-                  At Medify, our culture is built on the foundation of patient-centered care. We believe that healing begins with respect and empathy. Our ethical medical practices ensure that every patient is treated with the dignity they deserve, fostering an environment where trust and recovery go hand in hand.
+                  At Abba Sena Hospital, our culture is built on the foundation of patient-centered care. We believe that healing begins with respect and empathy. Our ethical medical practices ensure that every patient is treated with the dignity they deserve, fostering an environment where trust and recovery go hand in hand.
                 </p>
                 <div className="p-8 bg-medical-soft rounded-3xl border-l-4 border-medical-blue italic text-medical-dark font-medium">
                   "Our goal is not just to treat symptoms, but to care for the whole person. We believe in medicine that listens."
@@ -380,7 +380,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
                 ))}
               </div>
               <p className="text-sm text-medical-gray">
-                Medify is fully compliant with international healthcare standards and holds multiple certifications for safety and quality of care.
+                Abba Sena Hospitalis fully compliant with international healthcare standards and holds multiple certifications for safety and quality of care.
               </p>
             </div>
             <div className="space-y-12">
@@ -414,8 +414,8 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
       </section>
 
       {/* 10. COMMUNITY IMPACT */}
-      <section className="section-padding bg-medical-dark text-white overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-medical-blue/10 blur-[120px] rounded-full"></div>
+      <section className="section-padding bg-gradient-to-b from-medical-blue  to-white text-white overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-1/2 h-full  blur-[120px] rounded-full"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -499,7 +499,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="cta-banner"
+            className="relative bg-gradient-to-r from-medical-blue to-medical-lovely/40 text-white rounded-[3rem] p-12 md:p-24 overflow-hidden"
           >
             <div className="sphere-decoration top-[-10%] left-[-5%] w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
             <div className="sphere-decoration bottom-[-20%] right-[-10%] w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
@@ -514,10 +514,10 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <button 
                   onClick={onBookNow}
-                  className="bg-white text-[#7C3AED] px-10 py-4 rounded-full font-bold flex items-center justify-center gap-4 hover:shadow-2xl hover:scale-105 transition-all"
+                  className="bg-white text-medical-blue px-10 py-4 rounded-full font-bold flex items-center justify-center gap-4 hover:shadow-2xl hover:scale-105 transition-all"
                 >
                   Book Appointment
-                  <div className="w-8 h-8 bg-[#7C3AED] text-white rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-medical-blue text-white rounded-full flex items-center justify-center">
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </button>

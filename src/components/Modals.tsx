@@ -71,7 +71,7 @@ export default function Modals({
                       <Phone className="w-4 h-4" /> +1 (234) 567-890
                     </div>
                     <div className="flex items-center gap-3 text-sm">
-                      <Mail className="w-4 h-4" /> care@medify.com
+                      <Mail className="w-4 h-4" /> care@Abba Sena Hospital.com
                     </div>
                   </div>
                 </div>

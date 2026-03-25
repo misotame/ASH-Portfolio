@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Send, 
-  MessageSquare, 
-  Calendar, 
-  Zap, 
-  ShieldCheck, 
-  Users, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
+  MessageSquare,
+  Calendar,
+  Zap,
+  ShieldCheck,
+  Users,
   Award,
   ChevronDown,
   Facebook,
@@ -33,6 +33,9 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
   });
 
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+
+  const [hideMarker, setHideMarker] = useState(false);
+
 
   const faqs = [
     {
@@ -89,14 +92,14 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
 
   return (
     <div className="min-h-screen bg-white text-medical-dark selection:bg-medical-blue/30 overflow-x-hidden">
-      
+
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center pt-20 overflow-hidden">
         {/* Futuristic Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-medical-blue/10 rounded-full blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-purple-600/5 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-          
+
           {/* Glowing Particles (Animated via CSS) */}
           <div className="absolute inset-0">
             {[...Array(20)].map((_, i) => (
@@ -230,16 +233,16 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2 group">
                     <label className="text-xs font-bold text-medical-muted uppercase tracking-widest ml-1">Full Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="John Doe"
                       className="w-full bg-medical-soft/30 border border-medical-blue/5 rounded-2xl py-4 px-6 text-medical-dark focus:outline-none focus:border-medical-blue/40 focus:bg-white transition-all"
                     />
                   </div>
                   <div className="space-y-2 group">
                     <label className="text-xs font-bold text-medical-muted uppercase tracking-widest ml-1">Email Address</label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       placeholder="john@example.com"
                       className="w-full bg-medical-soft/30 border border-medical-blue/5 rounded-2xl py-4 px-6 text-medical-dark focus:outline-none focus:border-medical-blue/40 focus:bg-white transition-all"
                     />
@@ -249,16 +252,16 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2 group">
                     <label className="text-xs font-bold text-medical-muted uppercase tracking-widest ml-1">Phone Number</label>
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
                       placeholder="+1 (555) 000-0000"
                       className="w-full bg-medical-soft/30 border border-medical-blue/5 rounded-2xl py-4 px-6 text-medical-dark focus:outline-none focus:border-medical-blue/40 focus:bg-white transition-all"
                     />
                   </div>
                   <div className="space-y-2 group">
                     <label className="text-xs font-bold text-medical-muted uppercase tracking-widest ml-1">Subject</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="How can we help?"
                       className="w-full bg-medical-soft/30 border border-medical-blue/5 rounded-2xl py-4 px-6 text-medical-dark focus:outline-none focus:border-medical-blue/40 focus:bg-white transition-all"
                     />
@@ -267,7 +270,7 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
 
                 <div className="space-y-2 group">
                   <label className="text-xs font-bold text-medical-muted uppercase tracking-widest ml-1">Your Message</label>
-                  <textarea 
+                  <textarea
                     rows={5}
                     placeholder="Tell us more about your inquiry..."
                     className="w-full bg-medical-soft/30 border border-medical-blue/5 rounded-2xl py-4 px-6 text-medical-dark focus:outline-none focus:border-medical-blue/40 focus:bg-white transition-all resize-none"
@@ -293,21 +296,18 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
         <div className="max-w-7xl mx-auto relative">
           <div className="h-[600px] rounded-[4rem] overflow-hidden border border-medical-blue/10 shadow-2xl relative">
             {/* Placeholder for Map - In real app use Google Maps or Mapbox */}
-            <div className="absolute inset-0 bg-medical-soft/50 flex items-center justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=2000" 
-                alt="Map Background" 
-                className="w-full h-full object-cover opacity-40 grayscale"
-              />
-              <div className="absolute inset-0 bg-medical-blue/5 mix-blend-overlay"></div>
+            <div className="absolute inset-0 bg-medical-soft/50 flex items-center justify-center" onMouseDown={() => setHideMarker(true)}
+              onTouchStart={() => setHideMarker(true)}>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.7505062610244!2d36.5470659!3d9.086478299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x165301af49d07e47%3A0xc53732e75ad436a4!2sAbba%20Sena%20Hospital!5e0!3m2!1sen!2set!4v1774459567051!5m2!1sen!2set" allowfullscreen="" loading="lazy" className="w-full h-full object-cover" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             </div>
-            
-            {/* Floating Map Card */}
+
+            Floating Map Card
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="absolute top-12 right-12 z-20 bg-white/90 backdrop-blur-2xl p-10 rounded-[3rem] border border-medical-blue/10 shadow-2xl max-w-sm"
+              className="absolute top-12 right-12 z-20 bg-transparent backdrop-blur-sm p-10 rounded-[3rem] border border-medical-blue/10 shadow-2xl max-w-sm"
             >
               <div className="space-y-6">
                 <div className="w-14 h-14 rounded-2xl bg-medical-blue/10 flex items-center justify-center text-medical-blue">
@@ -326,15 +326,17 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
             </motion.div>
 
             {/* Map Marker Placeholder */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-12 h-12 bg-medical-blue/20 rounded-full flex items-center justify-center"
-              >
-                <div className="w-4 h-4 bg-medical-blue rounded-full shadow-[0_0_20px_rgba(26,95,255,1)]"></div>
-              </motion.div>
-            </div>
+            {!hideMarker && (
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <motion.div
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="w-12 h-12 bg-medical-blue/20 rounded-full flex items-center justify-center"
+                >
+                  <div className="w-4 h-4 bg-medical-blue rounded-full shadow-[0_0_20px_rgba(26,95,255,1)]"></div>
+                </motion.div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -372,7 +374,7 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
           >
             {/* Red Glow Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-red-600/5 to-transparent backdrop-blur-3xl border border-red-500/10"></div>
-            
+
             <div className="relative z-10 space-y-6">
               <div className="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-600 mx-auto animate-pulse">
                 <AlertCircle className="w-8 h-8" />
@@ -410,7 +412,7 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div key={idx} className="rounded-3xl border border-medical-blue/5 bg-white overflow-hidden shadow-sm">
-                <button 
+                <button
                   onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
                   className="w-full p-6 flex items-center justify-between text-left hover:bg-medical-soft/30 transition-all"
                 >

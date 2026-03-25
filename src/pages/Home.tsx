@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import hero_img from "../../assets/img/hero_img.png";
+import hospital_build from "../../assets/img/image.png";
+
 import { 
   Search, 
   ArrowRight, 
@@ -86,7 +89,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
     { 
       tag: "Advanced Care", 
       title: "Cardiac Care Unit", 
-      image: "https://picsum.photos/seed/fac1/800/600",
+      image: "https://d14d5nk8lue86f.cloudfront.net/s3fs-public/2017-04/4.28.17.care_.unit_.header.jpg",
       description: "Our Cardiac Care Unit is equipped with the latest monitoring technology and staffed by expert cardiologists 24/7.",
       hours: "24/7 Emergency Service",
       contact: "Dr. Sarah Johnson"
@@ -94,7 +97,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
     { 
       tag: "Modern Tech", 
       title: "Diagnostic Center", 
-      image: "https://picsum.photos/seed/fac2/800/600",
+      image: "https://i0.wp.com/pdc-et.com/wp-content/uploads/2025/04/Who_We_are_PDC.jpg?fit=1280%2C853&ssl=1",
       description: "State-of-the-art diagnostic imaging including 3T MRI, 128-slice CT, and advanced pathology labs.",
       hours: "8:00 AM - 10:00 PM",
       contact: "Dr. Michael Chen"
@@ -102,7 +105,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
     { 
       tag: "Patient First", 
       title: "Pediatric Wing", 
-      image: "https://picsum.photos/seed/fac3/800/600",
+      image: "https://www.hshs.org/getmedia/3ef780ac-49b2-43f6-9fba-b405f0c5c304/Pediatric-Unit.jpg?width=700&height=394&ext=.jpg",
       description: "A child-friendly environment designed to make medical visits comfortable and stress-free for our young patients.",
       hours: "9:00 AM - 8:00 PM",
       contact: "Dr. Emily Brown"
@@ -115,14 +118,14 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
   );
 
   return (
-    <main className="overflow-hidden bg-[#0A0A0A]">
+    <main className="overflow-hidden bg-[#ffffff]">
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[95vh] flex items-center justify-center px-4 py-12 lg:py-20">
+      <section id="home" className="relative min-h-[100vh] flex items-center justify-center px-4 py-12 lg:py-20 mt-30">
         {/* Background with Gradient and Grid */}
-        <div className="absolute inset-4 rounded-[40px] overflow-hidden bg-gradient-to-br from-[#5D5FEF] via-[#7B61FF] to-[#A5A6F6] z-0 shadow-2xl">
+        <div className="absolute inset-4 rounded-[40px] overflow-hidden bg-gradient-to-b from-[#1b1fee] via-[#4f4199] to-[#ffffff] z-0">
           {/* Grid Pattern Overlay */}
           <div className="absolute inset-0 opacity-20" style={{ 
-            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 1px)`,
             backgroundSize: '40px 40px'
           }}></div>
           
@@ -146,8 +149,8 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
 
             {/* Heading */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight">
-              We bring professional <br />
-              <span className="opacity-80">mental health support.</span>
+              We bring professional <br /> 
+             mental health support. 
             </h1>
 
             {/* Subheading */}
@@ -187,7 +190,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                     +
                   </div>
                 </div>
-                <p className="text-white text-sm font-medium leading-tight">
+                <p className="text-medical-blue text-sm font-medium leading-tight">
                   More than 150+ experienced <br />
                   doctors around the world
                 </p>
@@ -205,7 +208,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
             >
               {/* Main Doctor Image */}
               <img 
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop" 
+                src={hero_img} 
                 alt="Doctor" 
                 className="w-full h-auto object-contain relative z-10 drop-shadow-2xl"
                 referrerPolicy="no-referrer"
@@ -220,7 +223,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                 ))}
               </div>
 
-              {/* 24 Hour Service / Emergency Dialing */}
+              {/* 24 Hour Service Badge */}
               <motion.a
                 href="tel:+13025550107"
                 initial={{ x: 50, opacity: 0 }}
@@ -228,11 +231,11 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                 transition={{ delay: 0.8 }}
                 className="absolute left-[-10%] bottom-[20%] z-20 flex items-center gap-4 p-4 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 group hover:bg-white/20 transition-all cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-full bg-[#5D5FEF] flex items-center justify-center text-white shadow-lg shadow-[#5D5FEF]/40 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-full from-medical-blue to-[#172657] flex items-center justify-center text-white shadow-lg shadow-[#5D5FEF]/40 group-hover:scale-110 transition-transform">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-widest">Emergency Dialing</div>
+                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-widest">24 hour service</div>
                   <div className="text-white font-bold text-lg">(302) 555-0107</div>
                 </div>
               </motion.a>
@@ -248,13 +251,13 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                   <img src="https://picsum.photos/seed/patient1/100/100" alt="Caller" />
                 </div>
                 <div className="pr-4">
-                  <div className="text-medical-dark font-bold text-sm">Calling........</div>
+                  <div className="text-medical-dark font-bold text-sm">Calling.......</div>
                 </div>
                 <div className="flex gap-2">
                   <div className="w-8 h-8 rounded-full bg-medical-soft flex items-center justify-center text-medical-dark">
                     <Video className="w-4 h-4" />
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-white">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-bl from-medical-blue to-[#172657] flex items-center justify-center text-white">
                     <Phone className="w-4 h-4 rotate-[135deg]" />
                   </div>
                 </div>
@@ -263,16 +266,17 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
           </div>
         </div>
 
-        {/* Floating "How We Work" (Bottom Left) */}
-        <div className="absolute bottom-12 left-12 z-20 hidden lg:flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white cursor-pointer hover:bg-white/20 transition-all group">
-            <div className="w-10 h-10 rounded-full bg-[#5D5FEF] flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Video className="w-5 h-5" />
+        {/* How We Work (Bottom Left) */}
+        <div className="absolute bottom-12 left-12 z-20 hidden lg:flex items-center gap-4 ">
+          <a href="#how-we-work" className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white flex items-center justify-center text-white cursor-pointer hover:bg-white/20 transition-all group">
+            <div className="w-10 h-10 rounded-full bg-[#fff] flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Video className="w-5 h-5 text-medical-blue"/>
             </div>
-          </div>
-          <span className="text-white font-bold text-sm tracking-wide">How We Work</span>
+          </a>
+          <span className="text-medical-blue font-bold text-sm tracking-wide bg-white px-3 py-2 rounded-full">How We Work</span>
         </div>
       </section>
+
 
       {/* About Section */}
       <section id="about" className="section-padding bg-white relative overflow-hidden">
@@ -285,7 +289,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
               className="relative"
             >
               <div className="rounded-[4rem] overflow-hidden shadow-2xl relative z-10">
-                <img src="https://picsum.photos/seed/hospital/800/1000" alt="Modern Hospital" className="w-full h-full object-cover" />
+                <img src={hospital_build} alt="Modern Hospital" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-medical-blue rounded-[3rem] p-10 text-white shadow-2xl z-20 hidden md:block">
                 <ShieldCheck className="w-12 h-12 mb-6" />
@@ -302,7 +306,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
               className="space-y-10"
             >
               <div className="space-y-4">
-                <span className="pill-tag text-medical-lovely border-medical-lovely/20">About Medify</span>
+                <span className="pill-tag text-medical-lovely border-medical-lovely/20">About Abba Sena Hospital</span>
                 <h2 className="text-5xl md:text-6xl font-bold text-medical-dark leading-tight tracking-tighter">
                   We are Setting the <br />
                   <span className="text-medical-blue">Standard</span> in Care.
@@ -310,7 +314,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
               </div>
               
               <p className="text-xl text-medical-gray leading-relaxed">
-                Medify is a world-class healthcare provider dedicated to delivering 
+                Abba Sena Hospitalis a world-class healthcare provider dedicated to delivering 
                 exceptional medical services through innovation, compassion, and expertise. 
                 Our state-of-the-art facilities and renowned specialists ensure you receive 
                 the best possible care.
@@ -351,7 +355,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
       </section>
 
       {/* Trust & Expertise Section */}
-      <section className="section-padding bg-medical-dark text-white overflow-hidden relative">
+      <section className="section-padding bg-medical-dark text-white overflow-hidden relative rounded-tr-[24rem] rounded-bl-[24rem]">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-medical-blue/10 blur-[120px] rounded-full"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
@@ -400,29 +404,29 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                 <div className="space-y-6 pt-12">
                   <motion.div 
                     whileHover={{ y: -10 }}
-                    className="rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl"
+                    className="rounded-[3rem] border-5 border-white-500 overflow-hidden aspect-[4/5] shadow-2xl"
                   >
-                    <img src="https://picsum.photos/seed/trust1/600/800" alt="Expert Care" className="w-full h-full object-cover" />
+                    <img src="https://assets.cfr.org/image/fetch/t_tgh-max_2600x2600/https://build.thinkglobalhealth.org//wp-content/uploads/2025/04/thumbnail_Steubing20Bedside20with20patient_1.jpg" alt="Expert Care" className="w-full h-full object-cover" />
                   </motion.div>
                   <motion.div 
                     whileHover={{ y: -10 }}
-                    className="rounded-[3rem] overflow-hidden aspect-square shadow-2xl"
+                    className="rounded-[3rem] border-5 border-white-500 overflow-hidden aspect-square shadow-2xl"
                   >
-                    <img src="https://picsum.photos/seed/trust2/600/600" alt="Expert Care" className="w-full h-full object-cover" />
+                    <img src="https://media.istockphoto.com/id/496033775/photo/african-nurse-taking-care-of-senior-patient-in-wheelchair.jpg?s=612x612&w=0&k=20&c=UasQZ9h8v41hpWqMj_HDBc4C933DgZpP8QvjR5OYog8=" alt="Expert Care" className="w-full h-full object-cover" />
                   </motion.div>
                 </div>
                 <div className="space-y-6">
                   <motion.div 
                     whileHover={{ y: -10 }}
-                    className="rounded-[3rem] overflow-hidden aspect-square shadow-2xl"
+                    className="rounded-[3rem] border-5 border-white-500 overflow-hidden aspect-square shadow-2xl"
                   >
-                    <img src="https://picsum.photos/seed/trust3/600/600" alt="Expert Care" className="w-full h-full object-cover" />
+                    <img src="https://thumbs.dreamstime.com/b/african-american-medic-consulting-pregnant-woman-cabinet-to-check-medical-diagnosis-specialist-talking-patient-expecting-child-234849524.jpg" alt="Expert Care" className="w-full h-full object-cover" />
                   </motion.div>
                   <motion.div 
                     whileHover={{ y: -10 }}
-                    className="rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl"
+                    className="rounded-[3rem] border-5 border-white-500 overflow-hidden aspect-[4/5] shadow-2xl"
                   >
-                    <img src="https://picsum.photos/seed/trust4/600/800" alt="Expert Care" className="w-full h-full object-cover" />
+                    <img src="https://dam.northwell.edu/m/23da03e127103274/Drupal-Web_GettyImages-91156571.jpg" alt="Expert Care" className="w-full h-full object-cover" />
                   </motion.div>
                 </div>
               </div>
@@ -430,7 +434,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
               {/* Floating Badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-medical-blue rounded-full flex flex-col items-center justify-center text-center p-6 shadow-2xl border-8 border-medical-dark">
                 <Award className="w-10 h-10 mb-2" />
-                <div className="text-xs font-bold uppercase tracking-widest leading-tight">Top Rated Hospital 2024</div>
+                <div className="text-xs font-bold uppercase tracking-widest leading-tight">Top Rated Hospital 2018</div>
               </div>
             </div>
           </div>
@@ -477,7 +481,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                       {facility.tag}
                     </span>
                   </div>
-                  <div className="absolute bottom-8 left-8 right-8">
+                  <div className="absolute bottom-8 left-8 right-8 bg-gradient-to-t from-medical-blue  to-transparent p-4 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <h3 className="text-3xl font-bold text-white mb-4">{facility.title}</h3>
                     <div className="flex items-center gap-2 text-white/70 text-sm font-medium">
                       View Details <ArrowUpRight className="w-4 h-4" />
@@ -493,7 +497,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
       {/* Virtual Consultation Section */}
       <section className="section-padding bg-medical-soft/30">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-medical-blue rounded-[4rem] p-12 md:p-24 text-white relative overflow-hidden">
+          <div className="bg-gradient-to-bl from-medical-blue/40 to-medical-blue rounded-[4rem] p-12 md:p-24 text-white relative overflow-hidden">
             <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-[-10%] left-[-5%] w-64 h-64 bg-medical-dark/20 rounded-full blur-3xl"></div>
             
@@ -607,7 +611,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
       </section>
 
       {/* Specialists Section */}
-      <section id="membership" className="section-padding bg-medical-soft/30">
+      <section id="membership" className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
             <div className="space-y-4">
@@ -691,7 +695,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="cta-banner"
+            className="cta-container bg-gradient-to-bl from-medical-blue/40 to-medical-blue rounded-[4rem] p-12 md:p-24 text-white relative overflow-hidden flex flex-col items-center justify-center text-center gap-8"
           >
             <div className="sphere-decoration top-[-10%] left-[-5%] w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
             <div className="sphere-decoration bottom-[-20%] right-[-10%] w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
@@ -702,7 +706,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                 World-Class Healthcare?
               </h2>
               <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                Join thousands of satisfied patients who trust Medify for their 
+                Join thousands of satisfied patients who trust Abba Sena Hospitalfor their 
                 medical needs. Book your appointment today.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">

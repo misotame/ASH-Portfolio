@@ -38,13 +38,13 @@ export default function App() {
   const [selectedFacility, setSelectedFacility] = useState<any>(null);
 
   const navItems = [
-    { name: 'Doctors', href: '/doctors' },
-    { name: 'Book Appointment', href: '/appointment' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'About Us', href: '/about' },
+    { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Facilities', href: '/facilities' },
-    { name: 'Membership', href: '/#membership' },
+    { name: 'Doctors', href: '/doctors' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Book Appointment', href: '/appointment' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   useEffect(() => {

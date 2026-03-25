@@ -20,7 +20,7 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
           <div className="flex gap-4">
             <button 
               onClick={() => setIsBookingModalOpen(true)}
-              className="bg-[#8B5CF6] text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-[#7C3AED] transition-all"
+              className="bg-medical-blue text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-[#7C3AED] transition-all"
             >
               Get Started <ArrowRight className="w-5 h-5" />
             </button>
@@ -40,10 +40,10 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
           {/* Brand & Newsletter */}
           <div className="lg:col-span-4 space-y-12">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#8B5CF6] flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-10 h-10 rounded-full bg-medical-blue flex items-center justify-center text-white font-bold text-xl">
                 M
               </div>
-              <span className="text-3xl font-bold tracking-tight">Medify</span>
+              <span className="text-3xl font-bold tracking-tight">Abba Sena Hospital</span>
             </div>
 
             <div className="space-y-6">
@@ -56,7 +56,7 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
                 />
                 <button 
                   onClick={() => setIsNewsletterModalOpen(true)}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#8B5CF6] text-white px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-[#7C3AED] transition-all"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-medical-blue text-white px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-[#7C3AED] transition-all"
                 >
                   Book a Demo <ArrowRight className="w-4 h-4" />
                 </button>
@@ -136,7 +136,7 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-white/10">
           <div className="flex flex-wrap justify-center gap-6 text-xs text-gray-500">
-            <span>Medify© 2026 Privacy</span>
+            <span>Abba Sena Hospital© 2026 Privacy</span>
             <span>Accessibility</span>
             <span>Terms</span>
             <span>Licenses</span>

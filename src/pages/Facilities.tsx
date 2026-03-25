@@ -35,7 +35,7 @@ export default function Facilities({ setIsBookingModalOpen }: FacilitiesProps) {
     {
       title: "Cardiac Care Unit",
       icon: <Heart className="w-8 h-8" />,
-      image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800",
+      image: "https://d14d5nk8lue86f.cloudfront.net/s3fs-public/2017-04/4.28.17.care_.unit_.header.jpg",
       description: "Our Cardiac Care Unit is equipped with the latest monitoring technology and staffed by expert cardiologists 24/7.",
       features: ["Advanced ECG Monitoring", "Emergency Defibrillation", "Specialized Nursing Staff", "Rapid Response Team"]
     },
@@ -226,28 +226,7 @@ export default function Facilities({ setIsBookingModalOpen }: FacilitiesProps) {
           </div>
         </div>
 
-        {/* Floating Trust Bar */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-5xl px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="bg-white/80 backdrop-blur-3xl border border-medical-blue/10 rounded-[2.5rem] p-8 md:p-10 flex flex-col md:flex-row justify-between items-center gap-8 shadow-2xl"
-          >
-            {stats.map((stat, idx) => (
-              <div key={idx} className="flex items-center gap-6 group">
-                <div className="w-14 h-14 rounded-2xl bg-medical-blue/5 flex items-center justify-center text-medical-blue group-hover:scale-110 transition-transform">
-                  {stat.icon}
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-medical-dark mb-1">{stat.value}</div>
-                  <div className="text-xs text-medical-muted uppercase tracking-widest font-bold">{stat.label}</div>
-                </div>
-                {idx < stats.length - 1 && <div className="hidden md:block w-px h-12 bg-medical-blue/10 ml-8"></div>}
-              </div>
-            ))}
-          </motion.div>
-        </div>
+        
       </section>
 
       {/* Advanced Facilities Grid */}
