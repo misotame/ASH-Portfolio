@@ -344,7 +344,7 @@ export default function Services({ onBookNow }: ServicesProps) {
                     className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video"
                   >
                     <img 
-                      src={`https://images.unsplash.com/photo-${index === 0 ? '1628348068343-c6a848d2b6dd' : index === 1 ? '1581594632702-f232e297cc6a' : '1530026405186-ed1f139313f8'}?auto=format&fit=crop&q=80&w=1000`} 
+                      src={`https://i0.wp.com/www.treatathomes.com/wp-content/uploads/2022/07/paediatric.jpg?fit=640%2C427&ssl=1`} 
                       alt={service.name}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
