@@ -382,7 +382,7 @@ export default function Services({ onBookNow }: ServicesProps) {
                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-500">
                     {step.icon}
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
+                  <h3 className="font-black text-[1.25rem] text-gray-900 mb-2">{step.title}</h3>
                   <p className="text-sm text-gray-600">{step.desc}</p>
                 </motion.div>
               ))}
