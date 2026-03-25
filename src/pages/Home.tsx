@@ -108,7 +108,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
       image: "https://www.hshs.org/getmedia/3ef780ac-49b2-43f6-9fba-b405f0c5c304/Pediatric-Unit.jpg?width=700&height=394&ext=.jpg",
       description: "A child-friendly environment designed to make medical visits comfortable and stress-free for our young patients.",
       hours: "9:00 AM - 8:00 PM",
-      contact: "Dr. Emily Brown"
+      contact: "Dr. Emily Brown "
     }
   ];
 
