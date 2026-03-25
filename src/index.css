@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  /* Primary Colors */
+  --color-medical-blue: #1A5FFF;
+  --color-medical-blue-alt: #2567FF;
+  --color-medical-dark: #0E1C48;
+  
+  /* Secondary Colors */
+  --color-medical-soft: #F4F7FF;
+  --color-medical-muted: #97A6C4;
+  --color-medical-light: #E4ECFF;
+  
+  /* Grayscale */
+  --color-medical-black: #0A0C0F;
+  --color-medical-gray: #4E4E4E;
+  --color-medical-gray-light: #8E8E8E;
+  --color-medical-border: #E1E1E1;
+
+  /* Keep Lovely as accent */
+  --color-medical-lovely: #FF6B6B;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-medical-black bg-white antialiased;
+  }
+
+  h1 { @apply text-[40px] md:text-[72px] font-bold leading-[1.1] tracking-tight; }
+  h2 { @apply text-[32px] md:text-[64px] font-bold leading-[1.1] tracking-tight; }
+  h3 { @apply text-[28px] md:text-[48px] font-semibold leading-[1.2]; }
+  h4 { @apply text-[24px] md:text-[40px] font-semibold leading-[1.2]; }
+  h5 { @apply text-[20px] md:text-[32px] font-bold leading-[1.3]; }
+}
+
+.modal-overlay {
+  @apply fixed inset-0 z-[100] bg-black/60 backdrop-blur-md flex items-center justify-center p-6;
+}
+
+.modal-content {
+  @apply bg-white rounded-[3rem] p-10 md:p-16 max-w-2xl w-full relative overflow-hidden shadow-2xl;
+}
+
+.mobile-menu-overlay {
+  @apply fixed inset-0 z-[60] bg-medical-dark flex flex-col items-center justify-center p-12 text-center;
+}
+
+.mobile-nav-link {
+  @apply text-4xl font-bold text-white hover:text-medical-blue transition-colors py-4;
+}
+
+.lovely-gradient {
+  background: radial-gradient(circle at 10% 20%, rgba(26, 95, 255, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 90% 80%, rgba(255, 107, 107, 0.05) 0%, transparent 50%);
+}
+
+.pill-btn {
+  @apply px-5 py-2 rounded-full border border-medical-border text-medical-gray text-sm font-medium hover:bg-medical-soft transition-all;
+}
+
+.pill-btn-white {
+  @apply px-5 py-2 rounded-full bg-white text-medical-dark text-sm font-bold shadow-sm hover:shadow-md transition-all flex items-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-medical-blue text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-medical-blue-alt transition-all shadow-lg hover:shadow-medical-blue/20;
+}
+
+.btn-secondary {
+  @apply border-2 border-medical-blue text-medical-blue px-8 py-4 rounded-full font-bold text-lg hover:bg-medical-blue hover:text-white transition-all;
+}
+
+.logo-tab {
+  @apply bg-white px-8 py-4 rounded-b-[2rem] shadow-xl flex flex-col items-center border-x border-b border-medical-soft;
+}
+
+.pill-tag {
+  @apply bg-medical-soft text-medical-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest;
+}
+
+.nav-arrow {
+  @apply w-12 h-12 rounded-full border border-medical-border flex items-center justify-center transition-all hover:bg-medical-blue hover:text-white hover:border-medical-blue;
+}
+
+.nav-arrow-active {
+  @apply bg-medical-blue text-white border-medical-blue;
+}
+
+.about-card {
+  @apply relative rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-500;
+}
+
+.location-tag {
+  @apply absolute bottom-8 left-8 bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-full flex items-center gap-2 text-xs font-bold text-medical-dark shadow-lg;
+}
+
+.nav-blend {
+  @apply mix-blend-difference text-white;
+}
+
+.specialist-hero-card {
+  @apply bg-medical-soft rounded-[3rem] p-12 relative overflow-hidden flex flex-col justify-between min-h-[550px] shadow-sm;
+}
+
+.specialist-mini-card {
+  @apply bg-medical-soft rounded-[3rem] p-10 flex flex-col justify-between min-h-[250px] transition-all hover:shadow-2xl hover:-translate-y-2;
+}
+
+.icon-circle {
+  @apply w-14 h-14 rounded-full bg-medical-blue flex items-center justify-center text-white mb-8 shadow-lg shadow-medical-blue/30;
+}
+
+.specialist-btn-white {
+  @apply bg-white text-medical-dark px-8 py-4 rounded-full font-bold text-sm shadow-sm hover:shadow-md transition-all self-start;
+}
+
+.nav-arrow-specialist {
+  @apply w-16 h-16 rounded-full border border-medical-border flex items-center justify-center transition-all hover:bg-medical-dark hover:text-white;
+}
+
+.nav-arrow-specialist-active {
+  @apply bg-medical-dark text-white border-medical-dark;
+}
+
+.stats-bar {
+  @apply bg-medical-soft py-16 px-6 md:px-24 grid grid-cols-2 lg:grid-cols-4 gap-12 text-center;
+}
+
+.stat-number {
+  @apply text-5xl md:text-6xl font-bold text-medical-dark mb-3 tracking-tighter;
+}
+
+.stat-label {
+  @apply text-medical-muted text-xs font-bold uppercase tracking-[0.2em];
+}
+
+.insight-card {
+  @apply bg-medical-soft rounded-[3rem] overflow-hidden flex flex-col md:flex-row gap-8 p-8 shadow-sm;
+}
+
+.insight-image {
+  @apply w-full md:w-1/2 aspect-square rounded-[2.5rem] object-cover shadow-inner;
+}
+
+.highlight-pill {
+  @apply bg-medical-light text-medical-blue px-6 py-2 rounded-full font-bold inline-block;
+}
+
+.lern-more-pill {
+  @apply border-2 border-medical-dark rounded-full px-8 py-3 flex items-center gap-4 font-bold text-sm hover:bg-medical-dark hover:text-white transition-all;
+}
+
+.section-padding {
+  @apply py-32 px-6 md:px-12 lg:px-24;
+}
+
+.care-card {
+  @apply relative rounded-[2.5rem] overflow-hidden aspect-[4/5] cursor-pointer;
+}
+
+.care-card-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent p-8 flex flex-col justify-between transition-all duration-500;
+}
+
+.consultation-btn {
+  @apply bg-white/20 backdrop-blur-md border border-white/30 text-white px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all duration-300;
+}
+
+.map-container {
+  @apply relative rounded-[3rem] overflow-hidden shadow-2xl border border-medical-border;
+}
+
+.doctor-popup {
+  @apply absolute bg-white p-4 rounded-3xl shadow-2xl border border-medical-soft flex flex-col gap-4 w-64;
+}
+
+.feature-list-item {
+  @apply flex items-center gap-3 text-medical-gray font-medium;
+}
+
+.feature-check {
+  @apply w-5 h-5 rounded-full bg-medical-blue/10 flex items-center justify-center text-medical-blue;
+}
+
+.gradient-btn {
+  @apply bg-gradient-to-r from-[#A78BFA] to-[#6366F1] text-white px-8 py-3 rounded-full font-bold flex items-center gap-3 hover:shadow-lg hover:shadow-indigo-500/30 transition-all;
+}
+
+.footer-link {
+  @apply text-gray-400 hover:text-white transition-colors text-sm;
+}
+
+.social-icon {
+  @apply w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white/10 transition-all;
+}
+
+.newsletter-input {
+  @apply bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white text-sm w-full focus:outline-none focus:border-medical-blue/50 transition-all;
+}
+
+.cta-banner {
+  @apply relative bg-[#7C3AED] rounded-[3rem] p-16 md:p-24 overflow-hidden flex flex-col items-center text-center gap-12;
+}
+
+.sphere-decoration {
+  @apply absolute opacity-80 pointer-events-none;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-dash {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 10s linear infinite;
+}
+
+.glass-morphism {
+  @apply bg-white/10 backdrop-blur-2xl border border-white/20 shadow-2xl;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+}
