@@ -125,8 +125,8 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
         <div className="absolute inset-4 rounded-[40px] overflow-hidden bg-gradient-to-b from-[#1b1fee] via-[#4f4199] to-[#ffffff] z-0">
           {/* Grid Pattern Overlay */}
           <div className="absolute inset-0 opacity-20" style={{ 
-            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 1px)`,
-            backgroundSize: '40px 40px'
+            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4) 2px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.4) 2px, transparent 1px)`,
+            backgroundSize: '80px 80px'
           }}></div>
           
           {/* Glowing Orbs */}
