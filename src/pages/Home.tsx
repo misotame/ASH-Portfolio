@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import hero_img from "../../assets/img/hero_img.png";
-import hospital_build from "../../assets/img/image.png";
+import hero_img from "../assets/img/hero_img.png";
+import hospital_build from "../assets/img/image.png";
 
 import { 
   Search, 
