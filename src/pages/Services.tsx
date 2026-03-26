@@ -18,89 +18,96 @@ import {
   CheckCircle2,
   PhoneCall,
   ChevronRight,
-  Star
+  Star,
+  Microscope
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const mainServices = [
   {
-    id: 'cardiology',
+    id: 'emergency',
+    icon: <AlertCircle className="w-8 h-8 text-blue-600" />,
+    name: 'Emergency Services',
+    description: '24/7 emergency care for trauma and acute medical conditions.',
+    details: 'Our Emergency Department provides round-the-clock critical care for life-threatening conditions. We serve the community of Western Oromia with rapid response and stabilization services.',
+    treatment: ['Trauma Care', 'Acute Medical Emergencies', 'Resuscitation', 'Triage Services'],
+    technology: 'Emergency monitoring equipment, Life support systems',
+    benefits: 'Immediate care, 24/7 availability, experienced emergency team.'
+  },
+  {
+    id: 'obstetrics',
     icon: <Heart className="w-8 h-8 text-blue-600" />,
-    name: 'Cardiology',
-    description: 'Advanced heart care including diagnostics, interventional cardiology, and heart failure management.',
-    details: 'Our cardiology department is equipped with state-of-the-art technology for early detection and treatment of cardiovascular diseases. We offer comprehensive services from routine check-ups to complex surgical procedures.',
-    treatment: ['ECG & Stress Testing', 'Echocardiography', 'Cardiac Catheterization', 'Heart Valve Repair'],
-    technology: '3D Mapping Systems, Robotic-Assisted Surgery',
-    benefits: 'Reduced recovery time, high success rates, personalized care plans.'
+    name: 'Obstetrics & Gynecology',
+    description: 'Comprehensive maternity care with approximately 4,000 births per year.',
+    details: 'Our maternity department provides complete prenatal, delivery, and postnatal care. We handle approximately 4,000 births annually, ensuring safe deliveries and maternal health.',
+    treatment: ['Prenatal Care', 'Normal Deliveries', 'C-Sections', 'Postnatal Care'],
+    technology: 'Labor and delivery suites, Fetal monitoring',
+    benefits: 'Experienced obstetricians, safe deliveries, comprehensive maternal care.'
   },
   {
     id: 'pediatrics',
     icon: <Baby className="w-8 h-8 text-blue-600" />,
     name: 'Pediatrics',
-    description: 'Comprehensive healthcare for infants, children, and adolescents in a child-friendly environment.',
-    details: 'We provide a wide range of pediatric services, from routine vaccinations and wellness check-ups to specialized care for chronic conditions. Our team is dedicated to the physical and emotional well-being of your child.',
-    treatment: ['Neonatal Care', 'Developmental Screening', 'Pediatric Surgery', 'Immunizations'],
-    technology: 'Pediatric-specific diagnostic tools, Child-friendly imaging',
+    description: 'Specialized healthcare for infants, children, and adolescents.',
+    details: 'We provide comprehensive pediatric services including vaccinations, wellness check-ups, and treatment for childhood illnesses. Our child-friendly environment ensures comfort for young patients.',
+    treatment: ['Vaccinations', 'Wellness Check-ups', 'Childhood Illness Treatment', 'Growth Monitoring'],
+    technology: 'Pediatric diagnostic tools, Child-friendly facilities',
     benefits: 'Specialized child care, family-centered approach, supportive environment.'
   },
   {
-    id: 'orthopedics',
-    icon: <Bone className="w-8 h-8 text-blue-600" />,
-    name: 'Orthopedics',
-    description: 'Expert treatment for bone, joint, and muscle conditions, including sports medicine and joint replacement.',
-    details: 'Our orthopedic surgeons use the latest techniques for joint replacement, spinal surgery, and sports injury treatment. We focus on restoring mobility and improving quality of life.',
-    treatment: ['Joint Replacement', 'Spinal Surgery', 'Sports Medicine', 'Fracture Management'],
-    technology: 'Minimally invasive surgical tools, Computer-aided navigation',
-    benefits: 'Faster recovery, improved mobility, long-term pain relief.'
-  },
-  {
-    id: 'neurology',
-    icon: <Brain className="w-8 h-8 text-blue-600" />,
-    name: 'Neurology',
-    description: 'Specialized care for disorders of the brain, spinal cord, and nervous system.',
-    details: 'We offer advanced diagnostics and treatment for conditions such as stroke, epilepsy, Parkinson\'s disease, and multiple sclerosis. Our neurological team is at the forefront of brain research.',
-    treatment: ['Stroke Management', 'Epilepsy Treatment', 'Neuro-rehabilitation', 'Sleep Disorder Studies'],
-    technology: 'Advanced MRI & CT Scans, EEG Monitoring',
-    benefits: 'Expert diagnosis, comprehensive rehabilitation, improved neurological function.'
-  },
-  {
-    id: 'radiology',
-    icon: <Scan className="w-8 h-8 text-blue-600" />,
-    name: 'Radiology',
-    description: 'State-of-the-art imaging and diagnostic services for accurate and timely medical assessments.',
-    details: 'Our radiology department provides a full spectrum of imaging services, including X-rays, CT scans, MRI, and ultrasound. We ensure high-quality images for precise diagnosis.',
-    treatment: ['Diagnostic Imaging', 'Interventional Radiology', 'Nuclear Medicine', 'Mammography'],
-    technology: 'Digital Radiography, High-field MRI',
-    benefits: 'Accurate diagnosis, early detection, minimally invasive procedures.'
-  },
-  {
-    id: 'general-medicine',
+    id: 'internal-medicine',
     icon: <Stethoscope className="w-8 h-8 text-blue-600" />,
-    name: 'General Medicine',
-    description: 'Primary care and internal medicine services for adults, focusing on prevention and chronic disease management.',
-    details: 'Our general practitioners provide comprehensive care for a variety of health issues. We emphasize preventive medicine and long-term health management.',
-    treatment: ['Routine Check-ups', 'Chronic Disease Management', 'Health Screenings', 'Infectious Disease Care'],
-    technology: 'Electronic Health Records, Telemedicine platforms',
-    benefits: 'Personalized care, comprehensive health monitoring, easy access to specialists.'
+    name: 'Internal Medicine',
+    description: 'Adult inpatient and outpatient care for various medical conditions.',
+    details: 'Our internal medicine department provides comprehensive care for adults, including diagnosis and treatment of various medical conditions, chronic disease management, and preventive care.',
+    treatment: ['Chronic Disease Management', 'Diagnostic Services', 'Preventive Care', 'Inpatient Treatment'],
+    technology: 'Diagnostic equipment, Patient monitoring systems',
+    benefits: 'Comprehensive adult care, experienced physicians, personalized treatment.'
+  },
+  {
+    id: 'general-surgery',
+    icon: <Scissors className="w-8 h-8 text-blue-600" />,
+    name: 'General Surgery',
+    description: 'Surgical services including minor and major operations.',
+    details: 'Our surgical department offers a range of procedures from minor outpatient surgeries to major operations. Our experienced surgical team ensures patient safety and optimal outcomes.',
+    treatment: ['Minor Surgeries', 'Major Operations', 'Emergency Surgeries', 'Post-operative Care'],
+    technology: 'Surgical suites, Anesthesia equipment',
+    benefits: 'Experienced surgeons, safe procedures, comprehensive post-operative care.'
+  },
+  {
+    id: 'laboratory',
+    icon: <Microscope className="w-8 h-8 text-blue-600" />,
+    name: 'Laboratory & Radiology',
+    description: 'Diagnostic imaging and laboratory testing services.',
+    details: 'Our laboratory and radiology departments provide essential diagnostic services including blood tests, imaging studies, and other diagnostic procedures to support accurate diagnosis and treatment.',
+    treatment: ['Blood Tests', 'X-rays', 'Ultrasound', 'Other Diagnostic Tests'],
+    technology: 'Laboratory equipment, Imaging machines',
+    benefits: 'Accurate diagnostics, timely results, support for treatment planning.'
   }
 ];
 
 const specializedDepartments = [
   {
-    name: 'Intensive Care Unit (ICU)',
-    description: '24/7 specialized care for critically ill patients with advanced life support systems.',
-    icon: <Activity className="w-12 h-12 text-white" />,
-    color: 'bg-blue-600'
-  },
-  {
-    name: 'Emergency & Trauma Care',
-    description: 'Immediate medical attention for life-threatening conditions and severe injuries.',
+    name: 'Emergency Department',
+    description: '24/7 emergency care for trauma and acute medical conditions, serving Western Oromia.',
     icon: <AlertCircle className="w-12 h-12 text-white" />,
     color: 'bg-red-600'
   },
   {
-    name: 'Surgical Services',
-    description: 'Comprehensive surgical care ranging from routine procedures to complex operations.',
+    name: 'Obstetrics & Gynecology',
+    description: 'Comprehensive maternity care with approximately 4,000 births per year.',
+    icon: <Heart className="w-12 h-12 text-white" />,
+    color: 'bg-pink-600'
+  },
+  {
+    name: 'Pediatrics',
+    description: 'Specialized healthcare for infants, children, and adolescents in a child-friendly environment.',
+    icon: <Baby className="w-12 h-12 text-white" />,
+    color: 'bg-blue-600'
+  },
+  {
+    name: 'General Surgery',
+    description: 'Surgical services including minor and major operations with experienced surgical team.',
     icon: <Scissors className="w-12 h-12 text-white" />,
     color: 'bg-green-600'
   },
@@ -111,9 +118,9 @@ const specializedDepartments = [
     color: 'bg-purple-600'
   },
   {
-    name: 'Oncology (Cancer Care)',
-    description: 'Multidisciplinary approach to cancer diagnosis, treatment, and support.',
-    icon: <ShieldCheck className="w-12 h-12 text-white" />,
+    name: 'Internal Medicine',
+    description: 'Adult inpatient and outpatient care for various medical conditions.',
+    icon: <Stethoscope className="w-12 h-12 text-white" />,
     color: 'bg-indigo-600'
   }
 ];

@@ -37,8 +37,8 @@ const departments = [
 const doctors = [
   { id: 1, name: 'Dr. Sarah Chen', specialty: 'Cardiology', deptId: 'cardiology', image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=300', availability: 'Available Today' },
   { id: 2, name: 'Dr. Michael Roberts', specialty: 'Cardiology', deptId: 'cardiology', image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300', availability: 'Next Available: Tomorrow' },
-  { id: 3, name: 'Dr. Elena Rodriguez', specialty: 'Pediatrics', deptId: 'pediatrics', image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=300', availability: 'Available Today' },
-  { id: 4, name: 'Dr. James Wilson', specialty: 'Neurology', deptId: 'neurology', image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=300', availability: 'Limited Slots' },
+  { id: 3, name: 'Pediatrics Team', specialty: 'Pediatrics', deptId: 'pediatrics', image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=300', availability: 'Available Today' },
+  { id: 4, name: 'Internal Medicine Team', specialty: 'Internal Medicine', deptId: 'internal-medicine', image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=300', availability: 'Available Today' },
 ];
 
 const timeSlots = [
@@ -121,7 +121,7 @@ export default function Appointment() {
           </motion.div>
 
           {/* Floating Glass UI Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-10">
             {[
               { label: "24/7 Booking Available", icon: <Clock className="w-6 h-6" />, color: "blue" },
               { label: "Instant Confirmation", icon: <CheckCircle2 className="w-6 h-6" />, color: "purple" },
@@ -365,7 +365,7 @@ export default function Appointment() {
                             type="tel" 
                             value={bookingData.phone}
                             onChange={(e) => setBookingData({ ...bookingData, phone: e.target.value })}
-                            placeholder="+1 (555) 000-0000"
+                            placeholder="+251 911 718 959"
                             className="w-full bg-medical-soft/30 border border-medical-blue/5 rounded-2xl py-4 px-6 text-medical-dark focus:outline-none focus:border-medical-blue/40 focus:bg-white transition-all"
                           />
                         </div>
@@ -610,7 +610,7 @@ export default function Appointment() {
                 <AlertCircle className="w-8 h-8" />
               </div>
               <h2 className="text-3xl md:text-5xl font-bold tracking-tighter">Need Immediate Help?</h2>
-              <div className="text-5xl md:text-7xl font-black tracking-tighter">+1 (555) 911-0000</div>
+              <div className="text-5xl md:text-7xl font-black tracking-tighter">+251 911 718 959</div>
               <button className="bg-white text-red-600 px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl hover:scale-105 transition-transform flex items-center gap-3 mx-auto">
                 <Phone className="w-6 h-6" /> Call Now
               </button>

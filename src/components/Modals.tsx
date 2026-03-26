@@ -108,7 +108,7 @@ export default function Modals({
                         <label className="text-xs font-bold uppercase tracking-widest text-medical-muted">Phone Number</label>
                         <div className="relative">
                           <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-medical-blue" />
-                          <input required type="tel" placeholder="+1 (234) 567-890" className="w-full pl-12 pr-4 py-3 bg-medical-soft rounded-2xl border-none focus:ring-2 focus:ring-medical-blue transition-all" />
+                          <input required type="tel" placeholder="+251 911 718 959" className="w-full pl-12 pr-4 py-3 bg-medical-soft rounded-2xl border-none focus:ring-2 focus:ring-medical-blue transition-all" />
                         </div>
                       </div>
                       <div className="space-y-2">

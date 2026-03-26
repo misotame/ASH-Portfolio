@@ -41,9 +41,9 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
           <div className="lg:col-span-4 space-y-12">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-medical-blue flex items-center justify-center text-white font-bold text-xl">
-                M
+                A
               </div>
-              <span className="text-3xl font-bold tracking-tight">Abba Sena Hospital</span>
+              <span className="text-3xl font-bold tracking-tight">Abba Sena General Hospital</span>
             </div>
 
             <div className="space-y-6">
@@ -88,46 +88,46 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
           {/* Links Columns */}
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-12">
             <div className="space-y-8">
-              <h4 className="font-bold text-lg text-white">Company</h4>
+              <h4 className="font-bold text-lg text-white">Hospital</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="footer-link">People platform</a></li>
-                <li><a href="#" className="footer-link">Full-service</a></li>
-                <li><a href="#" className="footer-link">Employee Benefits</a></li>
-                <li><a href="#" className="footer-link">Hiring and onboarding</a></li>
-                <li><a href="#" className="footer-link">Talent management</a></li>
-                <li><a href="#" className="footer-link">Insights and reporting</a></li>
+                <li><a href="#" className="footer-link">About Us</a></li>
+                <li><a href="#" className="footer-link">Our Services</a></li>
+                <li><a href="#" className="footer-link">Departments</a></li>
+                <li><a href="#" className="footer-link">Leadership</a></li>
+                <li><a href="#" className="footer-link">Careers</a></li>
+                <li><a href="#" className="footer-link">Contact</a></li>
               </ul>
             </div>
             <div className="space-y-8">
-              <h4 className="font-bold text-lg text-white">Features</h4>
+              <h4 className="font-bold text-lg text-white">Services</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="footer-link">Primary Care</a></li>
-                <li><a href="#" className="footer-link">Telehealth</a></li>
-                <li><a href="#" className="footer-link">Cardiology</a></li>
-                <li><a href="#" className="footer-link">Mental Health Services</a></li>
-                <li><a href="#" className="footer-link">Integrations</a></li>
-                <li><a href="#" className="footer-link">Pricing</a></li>
+                <li><a href="#" className="footer-link">Emergency Care</a></li>
+                <li><a href="#" className="footer-link">Maternity</a></li>
+                <li><a href="#" className="footer-link">Pediatrics</a></li>
+                <li><a href="#" className="footer-link">Surgery</a></li>
+                <li><a href="#" className="footer-link">Internal Medicine</a></li>
+                <li><a href="#" className="footer-link">Laboratory</a></li>
               </ul>
             </div>
             <div className="space-y-8">
-              <h4 className="font-bold text-lg text-white">Solutions</h4>
+              <h4 className="font-bold text-lg text-white">Patient Resources</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="footer-link">CareCrafters</a></li>
-                <li><a href="#" className="footer-link">HealthBridge</a></li>
-                <li><a href="#" className="footer-link">VitalLink</a></li>
-                <li><a href="#" className="footer-link">Global Business</a></li>
-                <li><a href="#" className="footer-link">Health Articles & Blogs</a></li>
+                <li><a href="#" className="footer-link">Patient Information</a></li>
+                <li><a href="#" className="footer-link">Visiting Hours</a></li>
+                <li><a href="#" className="footer-link">Insurance</a></li>
+                <li><a href="#" className="footer-link">Billing</a></li>
+                <li><a href="#" className="footer-link">Health Articles</a></li>
               </ul>
             </div>
             <div className="space-y-8">
-              <h4 className="font-bold text-lg text-white">For Accountants</h4>
+              <h4 className="font-bold text-lg text-white">Connect</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="footer-link">Become a partner</a></li>
-                <li><a href="#" className="footer-link">Partner community</a></li>
-                <li><a href="#" className="footer-link">Professional development</a></li>
-                <li><a href="#" className="footer-link">People Advisory</a></li>
-                <li><a href="#" className="footer-link">Accountant blog</a></li>
-                <li><a href="#" className="footer-link">Resources</a></li>
+                <li><a href="#" className="footer-link">Facebook</a></li>
+                <li><a href="#" className="footer-link">Emergency: +251 911 718 959</a></li>
+                <li><a href="#" className="footer-link">Email: abbasenahospital@gmail.com</a></li>
+                <li><a href="#" className="footer-link">Location: Nekemte, Ethiopia</a></li>
+                <li><a href="#" className="footer-link">Privacy Policy</a></li>
+                <li><a href="#" className="footer-link">Terms of Service</a></li>
               </ul>
             </div>
           </div>

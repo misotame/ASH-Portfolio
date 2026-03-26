@@ -70,45 +70,45 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
   }, []);
 
   const services = [
-    { icon: <Heart className="w-8 h-8" />, name: "Cardiology", desc: "Advanced heart care and diagnostics for all ages." },
-    { icon: <Activity className="w-8 h-8" />, name: "Neurology", desc: "Specialized treatment for brain and nervous system disorders." },
-    { icon: <Stethoscope className="w-8 h-8" />, name: "Pediatrics", desc: "Comprehensive healthcare for infants, children, and adolescents." },
-    { icon: <ShieldCheck className="w-8 h-8" />, name: "Orthopedics", desc: "Expert care for bones, joints, and musculoskeletal issues." },
-    { icon: <Zap className="w-8 h-8" />, name: "Emergency", desc: "24/7 critical care and rapid response medical services." },
-    { icon: <Microscope className="w-8 h-8" />, name: "Diagnostics", desc: "State-of-the-art laboratory and imaging services." }
+    { icon: <Zap className="w-8 h-8" />, name: "Emergency Services", desc: "24/7 emergency care for trauma and acute medical conditions." },
+    { icon: <Heart className="w-8 h-8" />, name: "Obstetrics & Gynecology", desc: "Comprehensive maternity care with approximately 4,000 births per year." },
+    { icon: <Stethoscope className="w-8 h-8" />, name: "Pediatrics", desc: "Specialized healthcare for infants, children, and adolescents." },
+    { icon: <Activity className="w-8 h-8" />, name: "Internal Medicine", desc: "Adult inpatient and outpatient care for various medical conditions." },
+    { icon: <ShieldCheck className="w-8 h-8" />, name: "General Surgery", desc: "Surgical services including minor and major operations." },
+    { icon: <Microscope className="w-8 h-8" />, name: "Laboratory & Radiology", desc: "Diagnostic imaging and laboratory testing services." }
   ];
 
   const doctors = [
-    { name: "Dr. Sarah Johnson", specialty: "Cardiology", image: "https://picsum.photos/seed/doc1/400/400", bio: "Expert in interventional cardiology with 15+ years of experience." },
-    { name: "Dr. Michael Chen", specialty: "Neurology", image: "https://picsum.photos/seed/doc2/400/400", bio: "Specializes in neurodegenerative diseases and brain health." },
-    { name: "Dr. Emily Brown", specialty: "Pediatrics", image: "https://picsum.photos/seed/doc3/400/400", bio: "Dedicated to providing compassionate care for children of all ages." },
-    { name: "Dr. James Wilson", specialty: "Orthopedics", image: "https://picsum.photos/seed/doc4/400/400", bio: "Expert in sports medicine and joint replacement surgeries." }
+    { name: "Dr. Abebè", specialty: "Hospital Director", image: "https://picsum.photos/seed/doc1/400/400", bio: "Leading Abba Sena Hospital with dedication to quality healthcare for Western Oromia." },
+    { name: "Dr. Mitiku Deresa", specialty: "General Practitioner", image: "https://picsum.photos/seed/doc2/400/400", bio: "Providing comprehensive medical care to our community." },
+    { name: "Medical Team", specialty: "Emergency Services", image: "https://picsum.photos/seed/doc3/400/400", bio: "Our dedicated emergency team provides 24/7 critical care." },
+    { name: "Nursing Staff", specialty: "Patient Care", image: "https://picsum.photos/seed/doc4/400/400", bio: "Compassionate nursing care for all patients." }
   ];
 
   const facilities = [
     { 
-      tag: "Advanced Care", 
-      title: "Cardiac Care Unit", 
+      tag: "24/7 Care", 
+      title: "Emergency Department", 
       image: "https://d14d5nk8lue86f.cloudfront.net/s3fs-public/2017-04/4.28.17.care_.unit_.header.jpg",
-      description: "Our Cardiac Care Unit is equipped with the latest monitoring technology and staffed by expert cardiologists 24/7.",
+      description: "Our Emergency Department provides 24/7 critical care for trauma and acute medical conditions, serving the community of Western Oromia.",
       hours: "24/7 Emergency Service",
-      contact: "Dr. Sarah Johnson"
+      contact: "Emergency Team"
     },
     { 
-      tag: "Modern Tech", 
-      title: "Diagnostic Center", 
+      tag: "Maternity Care", 
+      title: "Obstetrics & Gynecology", 
       image: "https://i0.wp.com/pdc-et.com/wp-content/uploads/2025/04/Who_We_are_PDC.jpg?fit=1280%2C853&ssl=1",
-      description: "State-of-the-art diagnostic imaging including 3T MRI, 128-slice CT, and advanced pathology labs.",
-      hours: "8:00 AM - 10:00 PM",
-      contact: "Dr. Michael Chen"
+      description: "Comprehensive maternity care with approximately 4,000 births per year. Our dedicated team ensures safe deliveries and maternal health.",
+      hours: "24/7 Maternity Services",
+      contact: "OB/GYN Team"
     },
     { 
-      tag: "Patient First", 
-      title: "Pediatric Wing", 
+      tag: "Child Care", 
+      title: "Pediatric Ward", 
       image: "https://www.hshs.org/getmedia/3ef780ac-49b2-43f6-9fba-b405f0c5c304/Pediatric-Unit.jpg?width=700&height=394&ext=.jpg",
-      description: "A child-friendly environment designed to make medical visits comfortable and stress-free for our young patients.",
-      hours: "9:00 AM - 8:00 PM",
-      contact: "Dr. Emily Brown "
+      description: "Specialized healthcare for infants, children, and adolescents in a child-friendly environment.",
+      hours: "24/7 Pediatric Care",
+      contact: "Pediatrics Team"
     }
   ];
 
@@ -149,12 +149,12 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
 
             {/* Heading */}
             <h1 className="text-3xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight">
-              Serving Patient with Trusted, Quality.
+              Abba Sena General Hospital
             </h1>
 
             {/* Subheading */}
             <p className="text-lg md:text-xl text-white/80 max-w-xl leading-relaxed">
-              Abba Sena General Hospital provides essential medical, surgical, maternity, and emergency services for communities across Nekemte and surrounding areas.
+              Nekemte's Leading 250-Bed Hospital. Comprehensive healthcare for Western Oromia, serving over 5 million people with emergency, maternity, pediatric, and general medical services.
             </p>
 
             {/* CTA Buttons */}
@@ -189,8 +189,8 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                   </div>
                 </div>
                 <p className="text-medical-blue text-sm font-medium leading-tight">
-                  More than 150+ experienced <br />
-                  doctors around the world
+                  Serving over 5 million <br />
+                  people in Western Oromia
                 </p>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
 
               {/* 24 Hour Service Badge */}
               <motion.a
-                href="tel:+13025550107"
+                href="tel:+251911718959"
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.8 }}
@@ -234,7 +234,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                 </div>
                 <div>
                   <div className="text-white/60 text-[10px] font-bold uppercase tracking-widest">24 hour service</div>
-                  <div className="text-white font-bold text-lg">(302) 555-0107</div>
+                  <div className="text-white font-bold text-lg">+251 911 718 959</div>
                 </div>
               </motion.a>
 
@@ -304,7 +304,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
               className="space-y-10"
             >
               <div className="space-y-4">
-                <span className="pill-tag text-medical-lovely border-medical-lovely/20">About Abba Sena Hospital</span>
+                <span className="pill-tag text-medical-lovely border-medical-lovely/20">About Abba Sena General Hospital</span>
                 <h2 className="text-5xl md:text-6xl font-bold text-medical-dark leading-tight tracking-tighter">
                   We are Setting the <br />
                   <span className="text-medical-blue">Standard</span> in Care.
@@ -312,10 +312,11 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
               </div>
               
               <p className="text-xl text-medical-gray leading-relaxed">
-                Abba Sena Hospitalis a world-class healthcare provider dedicated to delivering 
-                exceptional medical services through innovation, compassion, and expertise. 
-                Our state-of-the-art facilities and renowned specialists ensure you receive 
-                the best possible care.
+                Established in 2014, Abba Sena General Hospital is a private nonprofit institution 
+                serving over 5 million people in Western Oromia. We provide 24/7 emergency care, 
+                maternity and pediatric services (approximately 4,000 births per year), and 
+                inpatient/outpatient general medicine. Our mission is to deliver compassionate, 
+                quality healthcare to Nekemte and beyond.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -704,7 +705,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                 World-Class Healthcare?
               </h2>
               <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                Join thousands of satisfied patients who trust Abba Sena Hospitalfor their 
+                Join thousands of satisfied patients who trust Abba Sena General Hospital for their 
                 medical needs. Book your appointment today.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">

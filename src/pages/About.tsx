@@ -23,17 +23,15 @@ import { motion } from 'motion/react';
 
 export default function About({ onBookNow }: { onBookNow: () => void }) {
   const stats = [
-    { label: "Years of Service", value: "20+", icon: <History className="w-6 h-6" /> },
-    { label: "Patients Served", value: "50,000+", icon: <Users className="w-6 h-6" /> },
-    { label: "Medical Professionals", value: "100+", icon: <ShieldCheck className="w-6 h-6" /> },
+    { label: "Years of Service", value: "10+", icon: <History className="w-6 h-6" /> },
+    { label: "Bed Capacity", value: "250", icon: <Users className="w-6 h-6" /> },
+    { label: "Population Served", value: "5M+", icon: <ShieldCheck className="w-6 h-6" /> },
   ];
 
   const timeline = [
-    { year: "2004", title: "Hospital Founded", desc: "Abba Sena Hospitalwas established with a vision to provide accessible healthcare." },
-    { year: "2010", title: "Expansion Phase I", desc: "Added 50 new beds and a dedicated cardiology wing." },
-    { year: "2015", title: "Advanced Diagnostics", desc: "Introduced state-of-the-art MRI and CT scanning facilities." },
-    { year: "2020", title: "Digital Transformation", desc: "Launched virtual consultation and digital health records." },
-    { year: "2024", title: "Global Recognition", desc: "Awarded for excellence in patient-centered care." },
+    { year: "2014", title: "Hospital Founded", desc: "Abba Sena General Hospital was established in Nekemte, Oromia, with a vision to provide accessible healthcare to Western Oromia." },
+    { year: "2014-2020", title: "Growth & Development", desc: "Expanded services to include emergency care, obstetrics, pediatrics, and general surgery, serving the growing population." },
+    { year: "2020-Present", title: "Community Service", desc: "Continuing to serve over 5 million people with approximately 4,000 births per year and 24/7 emergency services." },
   ];
 
   const coreValues = [
@@ -53,9 +51,9 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
   ];
 
   const leadership = [
-    { name: "Dr. Robert Vance", title: "Medical Director", image: "https://picsum.photos/seed/leader1/400/400", bio: "With 25 years in healthcare management, Dr. Vance leads our clinical excellence initiatives." },
-    { name: "Sarah Miller", title: "Chief Executive Officer", image: "https://picsum.photos/seed/leader2/400/400", bio: "Sarah focuses on strategic growth and ensuring patient-centered operations across all departments." },
-    { name: "Dr. Elena Rossi", title: "Chief of Surgery", image: "https://picsum.photos/seed/leader3/400/400", bio: "A pioneer in robotic surgery, Dr. Rossi oversees our advanced surgical wings." },
+    { name: "Dr. Abebè", title: "Hospital Director", image: "https://picsum.photos/seed/leader1/400/400", bio: "Leading Abba Sena General Hospital with dedication to providing quality healthcare to the community of Western Oromia." },
+    { name: "Medical Team", title: "Department Heads", image: "https://picsum.photos/seed/leader2/400/400", bio: "Our dedicated department heads oversee emergency services, obstetrics, pediatrics, internal medicine, and surgery." },
+    { name: "Nursing Leadership", title: "Chief Nursing Officer", image: "https://picsum.photos/seed/leader3/400/400", bio: "Ensuring compassionate patient care and maintaining high standards of nursing practice across all wards." },
   ];
 
   const testimonials = [
@@ -109,7 +107,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
               <span className="pill-tag text-medical-blue border-medical-blue/20">Who We Are</span>
               <h2 className="text-4xl md:text-5xl font-bold text-medical-dark">Dedicated to Your Well-being</h2>
               <p className="text-lg text-medical-gray leading-relaxed">
-                Abba Sena Hospitalis more than just a hospital; we are a community dedicated to healing and innovation. Our patient-centered approach ensures that every individual receives personalized care tailored to their unique needs. We combine cutting-edge technology with compassionate service to make a lasting impact on the lives of our patients.
+                Abba Sena General Hospital is more than just a hospital; we are a community dedicated to healing and innovation. Established in 2014, we serve over 5 million people in Western Oromia with 24/7 emergency care, maternity services (approximately 4,000 births per year), pediatrics, and general medicine. Our patient-centered approach ensures that every individual receives personalized care tailored to their unique needs.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
                 {stats.map((stat, idx) => (
@@ -131,8 +129,8 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
                 <img src="https://picsum.photos/seed/who-we-are/800/1000" alt="Hospital Interior" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-medical-blue text-white p-10 rounded-[2.5rem] shadow-xl hidden md:block">
-                <div className="text-4xl font-bold mb-2">20+</div>
-                <div className="text-sm font-bold uppercase tracking-widest opacity-80">Years of Excellence</div>
+                <div className="text-4xl font-bold mb-2">10+</div>
+                <div className="text-sm font-bold uppercase tracking-widest opacity-80">Years of Service</div>
               </div>
             </motion.div>
           </div>
@@ -192,7 +190,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
               <Target className="w-12 h-12" />
               <h3 className="text-3xl font-bold">Our Mission</h3>
               <p className="text-white/80 leading-relaxed text-lg">
-                To provide high-quality, accessible, and compassionate healthcare services that improve the well-being of our community through innovation and clinical excellence.
+                To provide high-quality, accessible, and compassionate healthcare services to the people of Western Oromia, improving community well-being through dedicated medical care and emergency services.
               </p>
             </motion.div>
             <motion.div 
@@ -205,7 +203,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
               <Eye className="w-12 h-12" />
               <h3 className="text-3xl font-bold">Our Vision</h3>
               <p className="text-white/80 leading-relaxed text-lg">
-                To be the leading healthcare provider recognized for our commitment to patient-centered care, advanced medical research, and transformative health solutions.
+                To be the leading healthcare provider in Western Oromia, recognized for our commitment to patient-centered care, community service, and accessible medical solutions for all.
               </p>
             </motion.div>
             <motion.div 
@@ -335,7 +333,7 @@ export default function About({ onBookNow }: { onBookNow: () => void }) {
                 </p>
                 <div className="p-8 bg-medical-soft rounded-3xl border-l-4 border-medical-blue italic text-medical-dark font-medium">
                   "Our goal is not just to treat symptoms, but to care for the whole person. We believe in medicine that listens."
-                  <span className="block mt-4 not-italic font-bold text-sm text-medical-muted">— Dr. Robert Vance, Medical Director</span>
+                  <span className="block mt-4 not-italic font-bold text-sm text-medical-muted">— Abba Sena General Hospital Team</span>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-6">

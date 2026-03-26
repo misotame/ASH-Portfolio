@@ -77,10 +77,10 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
   ];
 
   const contactDetails = [
-    { icon: <MapPin className="w-5 h-5" />, title: "Address", content: "123 Medical Plaza, Health City, HC 45678" },
-    { icon: <Phone className="w-5 h-5" />, title: "Phone", content: "+1 (555) 000-1234", sub: "Emergency: +1 (555) 911-0000" },
-    { icon: <Mail className="w-5 h-5" />, title: "Email", content: "care@futurehealth.com" },
-    { icon: <Clock className="w-5 h-5" />, title: "Working Hours", content: "Mon - Fri: 8:00 AM - 8:00 PM", sub: "Sat - Sun: 9:00 AM - 5:00 PM" }
+    { icon: <MapPin className="w-5 h-5" />, title: "Address", content: "East Welega Zone, Nekemte, Ethiopia" },
+    { icon: <Phone className="w-5 h-5" />, title: "Phone", content: "+251 911 718 959", sub: "Emergency: 24/7 Available" },
+    { icon: <Mail className="w-5 h-5" />, title: "Email", content: "abbasenahospital@gmail.com" },
+    { icon: <Clock className="w-5 h-5" />, title: "Working Hours", content: "Emergency: 24/7", sub: "General: Mon-Sun 8:00 AM - 6:00 PM" }
   ];
 
   const quickActions = [
@@ -254,7 +254,7 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
                     <label className="text-xs font-bold text-medical-muted uppercase tracking-widest ml-1">Phone Number</label>
                     <input
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+251 911 718 959"
                       className="w-full bg-medical-soft/30 border border-medical-blue/5 rounded-2xl py-4 px-6 text-medical-dark focus:outline-none focus:border-medical-blue/40 focus:bg-white transition-all"
                     />
                   </div>
@@ -316,7 +316,7 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-medical-dark">Visit Our Hospital</h3>
                   <p className="text-medical-gray text-sm leading-relaxed">
-                    Our main campus is located in the heart of Health City, easily accessible by public transport and with ample parking.
+                    Our hospital is located in Nekemte, East Welega Zone, Oromia Region, Ethiopia. We serve the community of Western Oromia with accessible healthcare services.
                   </p>
                 </div>
                 <button className="w-full py-4 rounded-2xl bg-medical-blue text-white font-bold text-sm uppercase tracking-widest hover:shadow-lg transition-all flex items-center justify-center gap-2">
@@ -384,7 +384,7 @@ export default function Contact({ setIsBookingModalOpen }: { setIsBookingModalOp
                 <span className="text-red-600">Call Immediately</span>.
               </h2>
               <div className="text-5xl md:text-7xl font-black text-medical-dark tracking-tighter">
-                +1 (555) 911-0000
+                +251 911 718 959
               </div>
               <div className="pt-6">
                 <motion.button
