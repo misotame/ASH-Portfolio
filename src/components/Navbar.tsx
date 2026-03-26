@@ -8,6 +8,7 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import logo from "../assets/img/logo.png"
 
 interface NavbarProps {
@@ -23,7 +24,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
   const isAppointment = location.pathname === '/appointment';
   const isDarkPage = isHome || isAppointment;
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState('AF');
+  const { language, setLanguage } = useLanguage();
 
   const languages = [
     { code: 'AF', name: 'Afaan Oromo' },
@@ -88,7 +89,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
               className={`hidden md:flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all hover:bg-white/20 ${isMenuOpen ? 'text-white' : 'text-white'}`}
             >
               <Globe className="w-4 h-4" />
-              {selectedLang}
+              {language}
             </button>
             {isLangMenuOpen && (
               <div className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden z-50">
@@ -96,10 +97,10 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
                   <button
                     key={lang.code}
                     onClick={() => {
-                      setSelectedLang(lang.code);
+                      setLanguage(lang.code);
                       setIsLangMenuOpen(false);
                     }}
-                    className={`w-full px-4 py-2 text-left text-sm text-medical-blue hover:bg-gray-100 transition-colors ${selectedLang === lang.code ? 'bg-gray-100 font-semibold' : ''}`}
+                    className={`w-full px-4 py-2 text-left text-sm text-medical-blue hover:bg-gray-100 transition-colors ${language === lang.code ? 'bg-gray-100 font-semibold' : ''}`}
                   >
                     {lang.name}
                   </button>
@@ -167,8 +168,8 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
-                      onClick={() => setSelectedLang(lang.code)}
-                      className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${selectedLang === lang.code ? 'bg-white text-medical-blue' : 'bg-white/10 text-white hover:bg-white/20'}`}
+                      onClick={() => setLanguage(lang.code)}
+                      className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${language === lang.code ? 'bg-white text-medical-blue' : 'bg-white/10 text-white hover:bg-white/20'}`}
                     >
                       {lang.name}
                     </button>

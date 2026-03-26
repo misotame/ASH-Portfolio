@@ -10,6 +10,7 @@ import Facilities from './pages/Facilities';
 import Doctors from './pages/Doctors';
 import Contact from './pages/Contact';
 import Appointment from './pages/Appointment';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 // Scroll to top component to handle route changes
 function ScrollToTop() {
@@ -58,7 +59,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <LanguageProvider>
       <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Navbar 
@@ -109,6 +110,6 @@ export default function App() {
           setSelectedFacility={setSelectedFacility}
         />
       </div>
-    </>
+    </LanguageProvider>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import hero_img from "../assets/img/hero_img.png";
 import hospital_build from "../assets/img/image.png";
+import { useLanguage } from '../contexts/LanguageContext';
 
 import { 
   Search, 
@@ -55,6 +56,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSpecialty, setSelectedSpecialty] = useState('All');
+  const { t } = useLanguage();
 
   const heroImages = [
     "https://picsum.photos/seed/med1/1920/1080",
@@ -70,45 +72,45 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
   }, []);
 
   const services = [
-    { icon: <Zap className="w-8 h-8" />, name: "Emergency Services", desc: "24/7 emergency care for trauma and acute medical conditions." },
-    { icon: <Heart className="w-8 h-8" />, name: "Obstetrics & Gynecology", desc: "Comprehensive maternity care with approximately 4,000 births per year." },
-    { icon: <Stethoscope className="w-8 h-8" />, name: "Pediatrics", desc: "Specialized healthcare for infants, children, and adolescents." },
-    { icon: <Activity className="w-8 h-8" />, name: "Internal Medicine", desc: "Adult inpatient and outpatient care for various medical conditions." },
-    { icon: <ShieldCheck className="w-8 h-8" />, name: "General Surgery", desc: "Surgical services including minor and major operations." },
-    { icon: <Microscope className="w-8 h-8" />, name: "Laboratory & Radiology", desc: "Diagnostic imaging and laboratory testing services." }
+    { icon: <Zap className="w-8 h-8" />, name: t.services.emergency.name, desc: t.services.emergency.desc },
+    { icon: <Heart className="w-8 h-8" />, name: t.services.obstetrics.name, desc: t.services.obstetrics.desc },
+    { icon: <Stethoscope className="w-8 h-8" />, name: t.services.pediatrics.name, desc: t.services.pediatrics.desc },
+    { icon: <Activity className="w-8 h-8" />, name: t.services.internalMedicine.name, desc: t.services.internalMedicine.desc },
+    { icon: <ShieldCheck className="w-8 h-8" />, name: t.services.generalSurgery.name, desc: t.services.generalSurgery.desc },
+    { icon: <Microscope className="w-8 h-8" />, name: t.services.laboratory.name, desc: t.services.laboratory.desc }
   ];
 
   const doctors = [
-    { name: "Dr. Abebè", specialty: "Hospital Director", image: "https://picsum.photos/seed/doc1/400/400", bio: "Leading Abba Sena Hospital with dedication to quality healthcare for Western Oromia." },
-    { name: "Dr. Mitiku Deresa", specialty: "General Practitioner", image: "https://picsum.photos/seed/doc2/400/400", bio: "Providing comprehensive medical care to our community." },
-    { name: "Medical Team", specialty: "Emergency Services", image: "https://picsum.photos/seed/doc3/400/400", bio: "Our dedicated emergency team provides 24/7 critical care." },
-    { name: "Nursing Staff", specialty: "Patient Care", image: "https://picsum.photos/seed/doc4/400/400", bio: "Compassionate nursing care for all patients." }
+    { name: t.doctors.director.name, specialty: t.doctors.director.specialty, image: "https://picsum.photos/seed/doc1/400/400", bio: t.doctors.director.bio },
+    { name: t.doctors.generalPractitioner.name, specialty: t.doctors.generalPractitioner.specialty, image: "https://picsum.photos/seed/doc2/400/400", bio: t.doctors.generalPractitioner.bio },
+    { name: t.doctors.emergencyTeam.name, specialty: t.doctors.emergencyTeam.specialty, image: "https://picsum.photos/seed/doc3/400/400", bio: t.doctors.emergencyTeam.bio },
+    { name: t.doctors.nursingStaff.name, specialty: t.doctors.nursingStaff.specialty, image: "https://picsum.photos/seed/doc4/400/400", bio: t.doctors.nursingStaff.bio }
   ];
 
   const facilities = [
     { 
-      tag: "24/7 Care", 
-      title: "Emergency Department", 
+      tag: t.facilities.emergency.tag, 
+      title: t.facilities.emergency.title, 
       image: "https://d14d5nk8lue86f.cloudfront.net/s3fs-public/2017-04/4.28.17.care_.unit_.header.jpg",
-      description: "Our Emergency Department provides 24/7 critical care for trauma and acute medical conditions, serving the community of Western Oromia.",
-      hours: "24/7 Emergency Service",
-      contact: "Emergency Team"
+      description: t.facilities.emergency.description,
+      hours: t.facilities.emergency.hours,
+      contact: t.facilities.emergency.contact
     },
     { 
-      tag: "Maternity Care", 
-      title: "Obstetrics & Gynecology", 
+      tag: t.facilities.obstetrics.tag, 
+      title: t.facilities.obstetrics.title, 
       image: "https://i0.wp.com/pdc-et.com/wp-content/uploads/2025/04/Who_We_are_PDC.jpg?fit=1280%2C853&ssl=1",
-      description: "Comprehensive maternity care with approximately 4,000 births per year. Our dedicated team ensures safe deliveries and maternal health.",
-      hours: "24/7 Maternity Services",
-      contact: "OB/GYN Team"
+      description: t.facilities.obstetrics.description,
+      hours: t.facilities.obstetrics.hours,
+      contact: t.facilities.obstetrics.contact
     },
     { 
-      tag: "Child Care", 
-      title: "Pediatric Ward", 
+      tag: t.facilities.pediatrics.tag, 
+      title: t.facilities.pediatrics.title, 
       image: "https://www.hshs.org/getmedia/3ef780ac-49b2-43f6-9fba-b405f0c5c304/Pediatric-Unit.jpg?width=700&height=394&ext=.jpg",
-      description: "Specialized healthcare for infants, children, and adolescents in a child-friendly environment.",
-      hours: "24/7 Pediatric Care",
-      contact: "Pediatrics Team"
+      description: t.facilities.pediatrics.description,
+      hours: t.facilities.pediatrics.hours,
+      contact: t.facilities.pediatrics.contact
     }
   ];
 
@@ -144,29 +146,29 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
           >
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold uppercase tracking-wider">
-              Nekemte, Oromia Region, Ethiopia
+              {t.hero.badge}
             </div>
 
             {/* Heading */}
             <h1 className="text-3xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight">
-              Abba Sena General Hospital
+              {t.hero.heading}
             </h1>
 
             {/* Subheading */}
             <p className="text-lg md:text-xl text-white/80 max-w-xl leading-relaxed">
-              Nekemte's Leading 250-Bed Hospital. Comprehensive healthcare for Western Oromia, serving over 5 million people with emergency, maternity, pediatric, and general medical services.
+              {t.hero.subheading}
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="px-8 py-4 rounded-full border border-white/40 text-white font-bold hover:bg-white/10 transition-all">
-                Get Medical Care
+                {t.hero.ctaButtons.getMedicalCare}
               </button>
               <button 
                 onClick={() => setIsBookingModalOpen()}
                 className="px-8 py-4 rounded-full bg-[#1A1A1A] text-white font-bold hover:bg-black transition-all shadow-xl"
               >
-                Contact Hospital
+                {t.hero.ctaButtons.contactHospital}
               </button>
             </div>
 
@@ -189,8 +191,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                   </div>
                 </div>
                 <p className="text-medical-blue text-sm font-medium leading-tight">
-                  Serving over 5 million <br />
-                  people in Western Oromia
+                  {t.hero.doctorsBadge}
                 </p>
               </div>
             </div>
@@ -233,7 +234,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-widest">24 hour service</div>
+                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-widest">{t.hero.service24Hour}</div>
                   <div className="text-white font-bold text-lg">+251 911 718 959</div>
                 </div>
               </motion.a>
@@ -271,7 +272,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
               <Video className="w-5 h-5 text-medical-blue"/>
             </div>
           </a>
-          <span className="text-medical-blue font-bold text-sm tracking-wide bg-white px-3 py-2 rounded-full">How We Work</span>
+          <span className="text-medical-blue font-bold text-sm tracking-wide bg-white px-3 py-2 rounded-full">{t.hero.howWeWork}</span>
         </div>
       </section>
 
@@ -304,19 +305,15 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
               className="space-y-10"
             >
               <div className="space-y-4">
-                <span className="pill-tag text-medical-lovely border-medical-lovely/20">About Abba Sena General Hospital</span>
+                <span className="pill-tag text-medical-lovely border-medical-lovely/20">{t.about.pillTag}</span>
                 <h2 className="text-5xl md:text-6xl font-bold text-medical-dark leading-tight tracking-tighter">
-                  We are Setting the <br />
-                  <span className="text-medical-blue">Standard</span> in Care.
+                  {t.about.heading} <br />
+                  <span className="text-medical-blue">{t.about.standard}</span> in Care.
                 </h2>
               </div>
               
               <p className="text-xl text-medical-gray leading-relaxed">
-                Established in 2014, Abba Sena General Hospital is a private nonprofit institution 
-                serving over 5 million people in Western Oromia. We provide 24/7 emergency care, 
-                maternity and pediatric services (approximately 4,000 births per year), and 
-                inpatient/outpatient general medicine. Our mission is to deliver compassionate, 
-                quality healthcare to Nekemte and beyond.
+                {t.about.description}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -325,8 +322,8 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-medical-dark mb-1">Modern Equipment</h4>
-                    <p className="text-sm text-medical-muted">Latest technology for precise diagnostics.</p>
+                    <h4 className="font-bold text-medical-dark mb-1">{t.about.features.modernEquipment.title}</h4>
+                    <p className="text-sm text-medical-muted">{t.about.features.modernEquipment.description}</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -334,8 +331,8 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-medical-dark mb-1">Expert Doctors</h4>
-                    <p className="text-sm text-medical-muted">World-renowned medical specialists.</p>
+                    <h4 className="font-bold text-medical-dark mb-1">{t.about.features.expertDoctors.title}</h4>
+                    <p className="text-sm text-medical-muted">{t.about.features.expertDoctors.description}</p>
                   </div>
                 </div>
               </div>
@@ -345,7 +342,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                   <div className="w-14 h-14 rounded-full bg-medical-dark text-white flex items-center justify-center group-hover:bg-medical-blue transition-all">
                     <Play className="w-5 h-5 fill-white" />
                   </div>
-                  Watch Our Story
+                  {t.about.watchStory}
                 </button>
               </div>
             </motion.div>
@@ -360,23 +357,21 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="space-y-12">
               <div className="space-y-6">
-                <span className="pill-tag text-white border-white/20">Trust & Expertise</span>
+                <span className="pill-tag text-white border-white/20">{t.trustExpertise.pillTag}</span>
                 <h2 className="text-5xl md:text-7xl font-bold leading-tight tracking-tighter">
-                  Your Health is Our <br />
-                  <span className="text-medical-blue italic font-serif">Priority</span>.
+                  {t.trustExpertise.heading} <br />
+                  <span className="text-medical-blue italic font-serif">{t.trustExpertise.priority}</span>.
                 </h2>
                 <p className="text-xl text-white/60 leading-relaxed max-w-xl">
-                  We combine decades of experience with the latest medical breakthroughs 
-                  to provide you with a healthcare experience that is safe, effective, 
-                  and deeply personal.
+                  {t.trustExpertise.description}
                 </p>
               </div>
 
               <div className="space-y-8">
                 {[
-                  { title: "Personalized Treatment Plans", desc: "Tailored care specifically for your unique health needs." },
-                  { title: "Advanced Surgical Procedures", desc: "Minimally invasive techniques for faster recovery." },
-                  { title: "Comprehensive Aftercare", desc: "Ongoing support and monitoring throughout your recovery." }
+                  { title: t.trustExpertise.features.personalizedTreatment.title, desc: t.trustExpertise.features.personalizedTreatment.description },
+                  { title: t.trustExpertise.features.advancedSurgical.title, desc: t.trustExpertise.features.advancedSurgical.description },
+                  { title: t.trustExpertise.features.comprehensiveAftercare.title, desc: t.trustExpertise.features.comprehensiveAftercare.description }
                 ].map((item, idx) => (
                   <motion.div 
                     key={idx}
@@ -433,7 +428,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
               {/* Floating Badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-medical-blue rounded-full flex flex-col items-center justify-center text-center p-6 shadow-2xl border-8 border-medical-dark">
                 <Award className="w-10 h-10 mb-2" />
-                <div className="text-xs font-bold uppercase tracking-widest leading-tight">Top Rated Hospital 2018</div>
+                <div className="text-xs font-bold uppercase tracking-widest leading-tight">{t.trustExpertise.badge}</div>
               </div>
             </div>
           </div>
@@ -445,15 +440,14 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
             <div className="space-y-4">
-              <span className="pill-tag text-medical-blue border-medical-blue/20">Specialized Care</span>
+              <span className="pill-tag text-medical-blue border-medical-blue/20">{t.specializedCare.pillTag}</span>
               <h2 className="text-5xl md:text-6xl font-bold text-medical-dark tracking-tighter">
-                Our World-Class <br />
-                <span className="text-medical-blue">Facilities</span>.
+                {t.specializedCare.heading} <br />
+                <span className="text-medical-blue">{t.specializedCare.facilities}</span>.
               </h2>
             </div>
             <p className="text-xl text-medical-gray max-w-md leading-relaxed">
-              We provide specialized care across multiple departments, each equipped 
-              with the latest medical technology.
+              {t.specializedCare.description}
             </p>
           </div>
 
