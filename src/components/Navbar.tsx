@@ -24,7 +24,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
   const isAppointment = location.pathname === '/appointment';
   const isDarkPage = isHome || isAppointment;
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, navbar } = useLanguage();
 
   const languages = [
     { code: 'AF', name: 'Afaan Oromo' },
@@ -54,7 +54,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
           <div className="w-20 overflow-hidden h-20 rounded-full bg-medical-blue flex items-center justify-center">
             <img className="w-20 h-20" src={logo} alt="Abba Sena Hospital Logo" />
           </div>
-          <span className={`text-2xl font-bold tracking-tight transition-colors ${isMenuOpen ? 'text-white' : `text-white ${isDarkPage ? 'lg:text-white' : 'lg:text-white'}`}`}>Abba Sena Hospital</span>
+          <span className={`text-2xl font-bold tracking-tight transition-colors ${isMenuOpen ? 'text-white' : `text-white ${isDarkPage ? 'lg:text-white' : 'lg:text-white'}`}`}>{navbar.logo}</span>
         </Link>
 
         {/* Center: Nav Links (Desktop) */}
@@ -112,7 +112,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
             to="/appointment"
             className={`hidden md:flex items-center gap-2 px-8 py-3 rounded-full font-bold text-sm transition-all bg-white text-medical-blue hover:bg-white/90 shadow-xl shadow-black/10`}
           >
-            Book Appointment
+            {navbar.bookAppointment}
           </Link>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -159,11 +159,11 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
                 onClick={() => setIsMenuOpen(false)}
                 className="mt-8 bg-medical-blue text-white px-12 py-4 rounded-full font-bold text-xl text-center"
               >
-                Book Appointment
+                {navbar.bookAppointment}
               </Link>
               {/* Mobile Language Switcher */}
               <div className="mt-4">
-                <p className="text-white/70 text-sm mb-2">Language</p>
+                <p className="text-white/70 text-sm mb-2">{navbar.language}</p>
                 <div className="flex gap-2">
                   {languages.map((lang) => (
                     <button

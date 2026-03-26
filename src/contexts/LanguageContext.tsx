@@ -1,10 +1,14 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { Translation, getTranslation } from '../translations/landingPage';
+import { NavbarTranslation, getNavbarTranslation } from '../translations/navbar';
+import { FooterTranslation, getFooterTranslation } from '../translations/footer';
 
 interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
   t: Translation;
+  navbar: NavbarTranslation;
+  footer: FooterTranslation;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -19,7 +23,9 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const value = {
     language,
     setLanguage,
-    t: getTranslation(language)
+    t: getTranslation(language),
+    navbar: getNavbarTranslation(language),
+    footer: getFooterTranslation(language)
   };
 
   return (
