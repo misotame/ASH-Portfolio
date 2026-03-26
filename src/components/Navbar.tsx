@@ -2,10 +2,12 @@ import {
   Search,
   Menu,
   X,
-  ArrowRight
+  ArrowRight,
+  Globe
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import logo from "../assets/img/logo.png"
 
 interface NavbarProps {
@@ -20,6 +22,14 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
   const isHome = location.pathname === '/';
   const isAppointment = location.pathname === '/appointment';
   const isDarkPage = isHome || isAppointment;
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [selectedLang, setSelectedLang] = useState('AF');
+
+  const languages = [
+    { code: 'AF', name: 'Afaan Oromo' },
+    { code: 'EN', name: 'English' },
+    { code: 'AM', name: 'አማርኛ' }
+  ];
 
   return (
     <>
@@ -69,8 +79,34 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
           ))}
         </div>
 
-        {/* Right: Action Button & Mobile Menu Toggle */}
+        {/* Right: Language Switcher, Action Button & Mobile Menu Toggle */}
         <div className="flex items-center gap-4">
+          {/* Language Switcher */}
+          <div className="relative">
+            <button
+              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+              className={`hidden md:flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all hover:bg-white/20 ${isMenuOpen ? 'text-white' : 'text-white'}`}
+            >
+              <Globe className="w-4 h-4" />
+              {selectedLang}
+            </button>
+            {isLangMenuOpen && (
+              <div className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg overflow-hidden z-50">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      setSelectedLang(lang.code);
+                      setIsLangMenuOpen(false);
+                    }}
+                    className={`w-full px-4 py-2 text-left text-sm text-medical-blue hover:bg-gray-100 transition-colors ${selectedLang === lang.code ? 'bg-gray-100 font-semibold' : ''}`}
+                  >
+                    {lang.name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
           <Link
             to="/appointment"
             className={`hidden md:flex items-center gap-2 px-8 py-3 rounded-full font-bold text-sm transition-all bg-white text-medical-blue hover:bg-white/90 shadow-xl shadow-black/10`}
@@ -124,6 +160,21 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
               >
                 Book Appointment
               </Link>
+              {/* Mobile Language Switcher */}
+              <div className="mt-4">
+                <p className="text-white/70 text-sm mb-2">Language</p>
+                <div className="flex gap-2">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => setSelectedLang(lang.code)}
+                      className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${selectedLang === lang.code ? 'bg-white text-medical-blue' : 'bg-white/10 text-white hover:bg-white/20'}`}
+                    >
+                      {lang.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         )}
