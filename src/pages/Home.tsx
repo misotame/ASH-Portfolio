@@ -120,7 +120,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
   return (
     <main className="overflow-hidden bg-[#ffffff]">
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[100vh] flex items-center justify-center px-4 py-12 lg:py-20 mt-30">
+      <section id="home" className="relative min-h-[100vh] flex items-center justify-center px-4 py-12 lg:py-20 mt-36">
         {/* Background with Gradient and Grid */}
         <div className="absolute inset-4 rounded-[40px] overflow-hidden bg-gradient-to-b from-[#1b1fee] via-[#4f4199] to-[#ffffff] z-0">
           {/* Grid Pattern Overlay */}
@@ -144,31 +144,29 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
           >
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold uppercase tracking-wider">
-              #1 Best Medical Center in the World
+              Nekemte, Oromia Region, Ethiopia
             </div>
 
             {/* Heading */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight">
-              We bring professional <br /> 
-             mental health support. 
+            <h1 className="text-3xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight">
+              Serving Patient with Trusted, Quality.
             </h1>
 
             {/* Subheading */}
             <p className="text-lg md:text-xl text-white/80 max-w-xl leading-relaxed">
-              Delivering comprehensive mental health support through our innovative 
-              platform that seamlessly connects your teams.
+              Abba Sena General Hospital provides essential medical, surgical, maternity, and emergency services for communities across Nekemte and surrounding areas.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="px-8 py-4 rounded-full border border-white/40 text-white font-bold hover:bg-white/10 transition-all">
-                Get Started Now
+                Get Medical Care
               </button>
               <button 
                 onClick={() => setIsBookingModalOpen()}
                 className="px-8 py-4 rounded-full bg-[#1A1A1A] text-white font-bold hover:bg-black transition-all shadow-xl"
               >
-                Book Appointment
+                Contact Hospital
               </button>
             </div>
 

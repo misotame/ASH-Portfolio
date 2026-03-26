@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from "../assets/img/logo.png"
 
 interface NavbarProps {
   isMenuOpen: boolean;
@@ -24,12 +25,12 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
     <>
       <nav
         className={`fixed top-0 left-0 right-0 m-5 z-[80] 
-  transition-all duration-500
-  px-6 py-4 flex justify-between items-center
-  rounded-full w-auto backdrop-blur-xl  
-  ${isMenuOpen
+          transition-all duration-500
+          px-6 py-4 flex justify-between items-center
+          rounded-full w-auto backdrop-blur-xl  
+          ${isMenuOpen                                           
             ? 'bg-medical-dark text-white'
-            : `bg-white/80 backdrop-blur-xl border border-white/20 shadow-sm 
+            : `bg-medical-blue backdrop-blur-xl border border-white/20 shadow-sm 
          ${isDarkPage
               ? 'lg:bg-medical-blue lg:backdrop-blur-none lg:border-none lg:shadow-none lg:text-white'
               : 'lg:bg-medical-blue lg:backdrop-blur-md lg:border lg:border-medical-soft/20 lg:text-white'
@@ -39,8 +40,8 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen, setIsBookingModalOpe
 
         {/* Left: Logo */}
         <Link to="/" className="flex items-center gap-2 z-10">
-          <div className="w-8 h-8 rounded-full bg-medical-blue flex items-center justify-center">
-            <div className="w-3 h-3 bg-white rounded-full"></div>
+          <div className="w-20 overflow-hidden h-20 rounded-full bg-medical-blue flex items-center justify-center">
+            <img className="w-20 h-20" src={logo} alt="Abba Sena Hospital Logo" />
           </div>
           <span className={`text-2xl font-bold tracking-tight transition-colors ${isMenuOpen ? 'text-white' : `text-white ${isDarkPage ? 'lg:text-white' : 'lg:text-white'}`}`}>Abba Sena Hospital</span>
         </Link>

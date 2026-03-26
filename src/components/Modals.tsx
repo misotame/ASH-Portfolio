@@ -171,7 +171,7 @@ export default function Modals({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsNewsletterModalOpen(false)}
-              className="absolute inset-0 bg-medical-dark/60 backdrop-blur-md"
+              className="absolute inset-0 bg-medical-dark/60 backdrop-blur-sm"
             />
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
