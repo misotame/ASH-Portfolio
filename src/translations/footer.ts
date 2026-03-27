@@ -136,69 +136,69 @@ export const footerTranslations: Record<string, FooterTranslation> = {
   },
   AF: {
     connect: {
-      heading: "Nu Waliin Wal Qunnamu",
-      getStarted: "Jalqabi",
-      contactUs: "Nu Qunnami"
+      heading: "Nu waliin wal-qunnamaa",
+      getStarted: "Jalqabaa",
+      contactUs: "Nu Qunnamaa"
     },
     brand: {
-      hospitalName: "Hospitala Guddaa Abba Sena",
+      hospitalName: "Hospitaala Waliigalaa Abbaa Seenaa",
       newsletter: {
-        heading: "Odeeffannoo keenyaaf galmaa'i",
-        placeholder: "Imeelii keessii galchi..",
-        bookDemo: "Demo Buufuu"
+        heading: "Odeeffannoo haaraa argachuuf galma\'aa",
+        placeholder: "Teessoo iimeeyilii keessan galchaa..",
+        bookDemo: "Agarsiisa Qabadhaa"
       },
       appStore: {
-        downloadOn: "Kasii irraa buufadhu",
+        downloadOn: "Irraa buufadhaa",
         appStore: "App Store"
       },
       googlePlay: {
-        getItOn: "KAN KANA IRRAA",
+        getItOn: "Irraa Argadhaa",
         googlePlay: "Google Play"
       }
     },
     links: {
       hospital: {
-        title: "Hospitala",
+        title: "Hospitaala",
         aboutUs: "Waa'ee Keenya",
         ourServices: "Tajaajila Keenya",
         departments: "Kutaalee",
         leadership: "Hoggansa",
-        careers: "Hojiiwwan",
-        contact: "Qunnamii"
+        careers: "Carraa Hojii",
+        contact: "Qunnamtii"
       },
       services: {
-        title: "Tajaajila",
-        emergencyCare: "Tajaajila Ariifachiisaa",
-        maternity: "Da'umsa",
-        pediatrics: "Daa'immanii",
-        surgery: "Qaama Qaamaa",
-        internalMedicine: "Qaama Keessaa",
-        laboratory: "Meeshalee Qorannoo"
+        title: "Tajaajiloota",
+        emergencyCare: "Tajaajila Balaa Tasaa",
+        maternity: "Kutaa Da'umsaa",
+        pediatrics: "Yaala Ijoollee",
+        surgery: "Baqaqsanii Yaaluu",
+        internalMedicine: "Dhibee Keessaa",
+        laboratory: "Laabiraatoorii"
       },
       patientResources: {
-        title: "Qabeenyota Dhukkubtootaa",
-        patientInformation: "Odeeffannoo Dhukkubtootaa",
-        visitingHours: "Sa'aatii Daawwachuu",
-        insurance: "Insurance",
+        title: "Odeeffannoo Dhukkubsataa",
+        patientInformation: "Odeeffannoo Dhukkubsataa",
+        visitingHours: "Sa'aatii Daawwannaa",
+        insurance: "Inshuraansii",
         billing: "Kaffaltii",
-        healthArticles: "Barruu Fayyaa"
+        healthArticles: "Barruulee Fayyaa"
       },
       connect: {
-        title: "Waliin Wal Qunnamu",
+        title: "Qunnamtii",
         facebook: "Facebook",
-        emergency: "Ariifachiisa: +251 911 718 959",
-        email: "Email: abbasenahospital@gmail.com",
-        location: "Bakka: Nekemte, Ethiopia",
-        privacyPolicy: "Imaammata Dhuunfaa",
-        termsOfService: "Haalota Tajaajilaa"
+        emergency: "Balaa Tasaa: +251 911 718 959",
+        email: "Iimayilii: abbasenahospital@gmail.com",
+        location: "Iddoo: Naqamtee, Itoophiyaa",
+        privacyPolicy: "Imaammata Iccitii",
+        termsOfService: "Dambii Tajaajilaa"
       }
     },
     bottom: {
-      copyright: "Hospitala Abba Sena© 2026 Imaammata Dhuunfaa",
-      accessibility: "Accessibility",
-      terms: "Haalota",
-      licenses: "Layisensiiwwan",
-      siteMap: "Kaartaa Iddoo"
+      copyright: "Hospitaala Abbaa Seenaa© 2026 Iccitii",
+      accessibility: "Dhaqqabummaa",
+      terms: "Haalawwan",
+      licenses: "Eeyyamoota",
+      siteMap: "Kaartaa Marsariitii"
     }
   },
   AM: {

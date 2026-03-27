@@ -488,7 +488,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
       </section>
 
       {/* Virtual Consultation Section */}
-      <section className="section-padding bg-medical-soft/30">
+      {/* <section className="section-padding bg-medical-soft/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-gradient-to-bl from-medical-blue/40 to-medical-blue rounded-[4rem] p-12 md:p-24 text-white relative overflow-hidden">
             <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
@@ -540,7 +540,6 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
                 <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white/10">
                   <img src="https://picsum.photos/seed/virtual/800/1000" alt="Virtual Consultation" className="w-full h-full object-cover" />
                 </div>
-                {/* Floating Status Card */}
                 <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-[2.5rem] shadow-2xl text-medical-dark hidden md:block">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
@@ -560,7 +559,7 @@ export default function Home({ setIsBookingModalOpen, setSelectedFacility }: Hom
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
       <section id="services" className="section-padding bg-white">

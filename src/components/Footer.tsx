@@ -65,26 +65,7 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
               </div>
             </div>
 
-            <div className="flex gap-4">
-              <button className="bg-white/5 border border-white/10 rounded-xl p-3 hover:bg-white/10 transition-all">
-                 <div className="flex items-center gap-3">
-                   <Apple className="w-6 h-6" />
-                   <div className="text-left">
-                     <p className="text-[10px] text-gray-400 uppercase leading-none">{footer.brand.appStore.downloadOn}</p>
-                     <p className="text-sm font-bold leading-none mt-1">{footer.brand.appStore.appStore}</p>
-                   </div>
-                 </div>
-              </button>
-              <button className="bg-white/5 border border-white/10 rounded-xl p-3 hover:bg-white/10 transition-all">
-                 <div className="flex items-center gap-3">
-                   <Play className="w-6 h-6" />
-                   <div className="text-left">
-                     <p className="text-[10px] text-gray-400 uppercase leading-none">{footer.brand.googlePlay.getItOn}</p>
-                     <p className="text-sm font-bold leading-none mt-1">{footer.brand.googlePlay.googlePlay}</p>
-                   </div>
-                 </div>
-              </button>
-            </div>
+            
           </div>
 
           {/* Links Columns */}

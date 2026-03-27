@@ -261,7 +261,7 @@ export const translations: Record<string, Translation> = {
   AF: {
     hero: {
       badge: "Nekemte, Oromia, Ethiopia",
-      heading: "Hospitala Guddaa Abba Sena",
+      heading: "Hospitala Guddaa Abbaa Seenaa",
       subheading: "Hospitala Nekemte qofa bu'aa 250 qaba. Fayyaa guutuu Oromia Dhihaatti, miseensota 5 miiliyoonii ol ta'an fayyadamaa, yeroo hunda tajaajila, da'umsa, daa'immanii, fi tajaajila fayyaa waliigalaa kennu.",
       ctaButtons: {
         getMedicalCare: "Fayyaa Argadhu",
