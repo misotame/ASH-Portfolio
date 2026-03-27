@@ -1,15 +1,16 @@
-import { 
-  Facebook, 
-  Instagram, 
-  Twitter, 
-  Linkedin, 
-  Apple, 
-  Play, 
-  ArrowRight, 
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Apple,
+  Play,
+  ArrowRight,
   ArrowUpRight,
   Mail
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen }: { setIsNewsletterModalOpen: (val: boolean) => void, setIsBookingModalOpen: (val: boolean) => void }) {
   const { footer } = useLanguage();
@@ -20,13 +21,13 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
         <div className="flex flex-col md:flex-row justify-between items-center gap-12 mb-24">
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight">{footer.connect.heading}</h2>
           <div className="flex gap-4">
-            <button 
+            <button
               onClick={() => setIsBookingModalOpen(true)}
               className="bg-medical-blue text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-[#7C3AED] transition-all"
             >
               {footer.connect.getStarted} <ArrowRight className="w-5 h-5" />
             </button>
-            <button 
+            <button
               onClick={() => setIsBookingModalOpen(true)}
               className="border border-white/20 text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-white/5 transition-all"
             >
@@ -51,12 +52,12 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
             <div className="space-y-6">
               <h4 className="text-xl font-bold">{footer.brand.newsletter.heading}</h4>
               <div className="relative max-w-md">
-                <input 
-                  type="email" 
-                  placeholder={footer.brand.newsletter.placeholder} 
+                <input
+                  type="email"
+                  placeholder={footer.brand.newsletter.placeholder}
                   className="newsletter-input"
                 />
-                <button 
+                <button
                   onClick={() => setIsNewsletterModalOpen(true)}
                   className="absolute right-2 top-1/2 -translate-y-1/2 bg-medical-blue text-white px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-[#7C3AED] transition-all"
                 >
@@ -65,7 +66,9 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
               </div>
             </div>
 
-            
+            <div className="flex justify-center mb-10">
+              <a href="mita-portfolio.vercel.app" className="border border-medical-blue hover:border-white hover:text-white py-2 px-8 rounded-full">About Developer</a>
+            </div>
           </div>
 
           {/* Links Columns */}
@@ -73,44 +76,44 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
             <div className="space-y-8">
               <h4 className="font-bold text-lg text-white">{footer.links.hospital.title}</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="footer-link">{footer.links.hospital.aboutUs}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.hospital.ourServices}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.hospital.departments}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.hospital.leadership}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.hospital.careers}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.hospital.contact}</a></li>
+                <li><Link to="/about" className="footer-link">{footer.links.hospital.aboutUs}</Link></li>
+                <li><Link to="services" className="footer-link">{footer.links.hospital.ourServices}</Link></li>
+                <li><Link to="facilities" className="footer-link">{footer.links.hospital.departments}</Link></li>
+                <li><Link to="services" className="footer-link">{footer.links.hospital.leadership}</Link></li>
+                <li><Link to="services" className="footer-link">{footer.links.hospital.careers}</Link></li>
+                <li><Link to="contact" className="footer-link">{footer.links.hospital.contact}</Link></li>
               </ul>
             </div>
             <div className="space-y-8">
               <h4 className="font-bold text-lg text-white">{footer.links.services.title}</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="footer-link">{footer.links.services.emergencyCare}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.services.maternity}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.services.pediatrics}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.services.surgery}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.services.internalMedicine}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.services.laboratory}</a></li>
+                <li><Link to="appointment" className="footer-link">{footer.links.services.emergencyCare}</Link></li>
+                <li><Link to="services" className="footer-link">{footer.links.services.maternity}</Link></li>
+                <li><Link to="services" className="footer-link">{footer.links.services.pediatrics}</Link></li>
+                <li><Link to="services" className="footer-link">{footer.links.services.surgery}</Link></li>
+                <li><Link to="services" className="footer-link">{footer.links.services.internalMedicine}</Link></li>
+                <li><Link to="services" className="footer-link">{footer.links.services.laboratory}</Link></li>
               </ul>
             </div>
             <div className="space-y-8">
               <h4 className="font-bold text-lg text-white">{footer.links.patientResources.title}</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="footer-link">{footer.links.patientResources.patientInformation}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.patientResources.visitingHours}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.patientResources.insurance}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.patientResources.billing}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.patientResources.healthArticles}</a></li>
+                <li><Link to="appointment" className="footer-link">{footer.links.patientResources.patientInformation}</Link></li>
+                <li><Link to="appointment" className="footer-link">{footer.links.patientResources.visitingHours}</Link></li>
+                <li><Link to="appointment" className="footer-link">{footer.links.patientResources.insurance}</Link></li>
+                <li><Link to="appointment" className="footer-link">{footer.links.patientResources.billing}</Link></li>
+                <li><Link to="appointment" className="footer-link">{footer.links.patientResources.healthArticles}</Link></li>
               </ul>
             </div>
             <div className="space-y-8">
               <h4 className="font-bold text-lg text-white">{footer.links.connect.title}</h4>
               <ul className="space-y-4">
-                <li><a href="#" className="footer-link">{footer.links.connect.facebook}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.connect.emergency}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.connect.email}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.connect.location}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.connect.privacyPolicy}</a></li>
-                <li><a href="#" className="footer-link">{footer.links.connect.termsOfService}</a></li>
+                <li><Link to="#" className="footer-link">{footer.links.connect.facebook}</Link></li>
+                <li><Link to="#" className="footer-link">{footer.links.connect.emergency}</Link></li>
+                <li><Link to="#" className="footer-link">{footer.links.connect.email}</Link></li>
+                <li><Link to="#" className="footer-link">{footer.links.connect.location}</Link></li>
+                <li><Link to="#" className="footer-link">{footer.links.connect.privacyPolicy}</Link></li>
+                <li><Link to="#" className="footer-link">{footer.links.connect.termsOfService}</Link></li>
               </ul>
             </div>
           </div>
@@ -126,10 +129,10 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
             <span>{footer.bottom.siteMap}</span>
           </div>
           <div className="flex gap-4">
-            <a href="#" className="social-icon"><Facebook className="w-4 h-4" /></a>
-            <a href="#" className="social-icon"><Instagram className="w-4 h-4" /></a>
-            <a href="#" className="social-icon"><Twitter className="w-4 h-4" /></a>
-            <a href="#" className="social-icon"><Linkedin className="w-4 h-4" /></a>
+            <Link to="#" className="social-icon"><Facebook className="w-4 h-4" /></Link>
+            <Link to="#" className="social-icon"><Instagram className="w-4 h-4" /></Link>
+            <Link to="#" className="social-icon"><Twitter className="w-4 h-4" /></Link>
+            <Link to="#" className="social-icon"><Linkedin className="w-4 h-4" /></Link>
           </div>
         </div>
       </div>
