@@ -67,7 +67,7 @@ export default function Footer({ setIsNewsletterModalOpen, setIsBookingModalOpen
             </div>
 
             <div className="flex justify-center mb-10">
-              <a href="https://mita-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" className="border border-medical-blue hover:border-white hover:text-white py-2 px-8 rounded-full">About Developer</a>
+              <a href="https://mita-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault();  window.open("https://mita-portfolio.vercel.app", "_blank");}} className="border border-medical-blue hover:border-white hover:text-white py-2 px-8 rounded-full">About Developer</a>
             </div>
           </div>
 
